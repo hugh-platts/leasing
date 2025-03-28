@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ford Ranger - Advert</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header Styles */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .header-title {
+      color: #fff;
+      font-size: 2.5em;
+      font-family: "Cinzel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    /* Section container */
+    .section {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    /* Carousel styles */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .carousel-button.prev {
+      left: 10px;
+    }
+    .carousel-button.next {
+      right: 10px;
+    }
+    /* Order Summary table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    /* Vehicle options styling */
+    .options-group {
+      margin-bottom: 15px;
+    }
+    .option-entry {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #444;
+      color: #ccc;
+    }
+    .option-entry.selected {
+      border-color: #007BFF;
+      background-color: #00539C;
+      color: #fff;
+    }
+    .mandatory-notice {
+      background: #CF241D;
+      border: 1px solid #b21e19;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    /* Collapsible details */
+    details {
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    details summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+    /* Hide tooltip buttons */
+    .tooltip__btn { display: none; }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">Ford Ranger</h1>
+  </header>
+  <div class="subtitle">Double Cab Wildtrak 2.0 EcoBlue 205 Auto Van Leasing and Contract Hire</div>
+  
+  <div class="section">
+    <h2>Image Gallery</h2>
+    <div class="carousel-container"><div class="carousel-slides">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-angularfront.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-angularrear.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-dashboard.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-frontseat.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-sideview.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-trunk.png?m=112w0pu" alt="Car Image" loading="lazy">
+</div>
+<button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+<button class="carousel-button next" aria-label="Next">&#10095;</button>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Pricing Details</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£250.00 Excl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£5,465.04 Excl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Options</h2>
+    <div class="mandatory-notice">
+      Please select at least one option from each group: <strong>Choose paint colour</strong>, 
+      <strong>Choose interior trim</strong> and <strong>Choose optional extras</strong>.
+      Any extra cost will be added as a one‑time payment.
+    </div>
+    <div class="options-group"><h3>Choose paint colour</h3>
+<div class="option-entry" data-group="Choose paint colour" data-price="600.0">Metallic - Agate black (£600.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="600.0">Metallic - Carbonized grey (£600.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="600.0">Metallic - Cyber orange (£600.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="600.0">Metallic - Moondust silver (£600.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Frozen white (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Blue Lightning (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Iconic silver (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Lucid red (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="750.0">Special Order Paint - Custom (£750.00)</div>
+</div>
+<div class="options-group"><h3>Choose interior trim</h3>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Micro rib embossed leather - Black (Free)</div>
+</div>
+<div class="options-group"><h3>Choose optional extras</h3>
+<div class="option-entry" data-group="Choose optional extras" data-price="510.0">13 Pin Towbar (£510.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="450.0">7 Pin Towbar (£450.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2100.0">Tonneau Cover - Retractable Roller Hardtype (£2100.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="240.0">18" Alloy Wheels Painted In Bolder Grey And All Terrain Tyres With Black Centre Cap (£240.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="900.0">20" Machined Matte Black Alloy Wheel/all Season Tyres With Gloss Black Centre Cap And 20" Alum Spare Wheel (£900.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="60.0">56MPH Engine Governor (£60.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="60.0">62MPH Engine Governor (£60.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="60.0">70MPH Engine Governor (£60.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="540.0">Bed Divider (£540.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2460.0">Body Colour Hardtop Pickup Box Canopy Pack - Ranger (£2460.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="180.0">Cargo Management System (£180.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1920.0">Deleting Flexible Rack System Pack - Ranger (£1920.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2220.0">Frozen White Hardtop Pickup Box Canopy Pack - Ranger (£2220.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="600.0">ICE Feature Pack 106 - Ranger (£600.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1980.0">Load Bars And Roller Shutter (£1980.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="0.0">Load Box Bedliner (Free)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="240.0">Manual Regeneration Initiation (£240.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1680.0">Manual Roller Shutter (£1680.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2220.0">Matt Black Hardtop Pickup Box Canopy Pack - Ranger (£2220.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="720.0">Metallic Paint (£720.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="0.0">Multi Stage Vehicle Option (Free)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="60.0">One Touch Power Rear Windows (£60.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="540.0">Power Pack 3 - Ranger (£540.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2160.0">Power Roller Shutter (£2160.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="750.0">Special Order Paint (£750.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="480.0">Spray In Load Box Bedliner (£480.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1680.0">Technology Package 46 - Ranger (£1680.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="540.0">Technology Package 50 - Ranger (£540.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1020.0">Technology Package 52 - Ranger (£1020.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1320.0">Technology Package 62 - Ranger (£1320.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="840.0">Technology Package 65 - Ranger (£840.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1320.0">Technology Package 68 - Ranger (£1320.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="840.0">Technology Package 88 - Ranger (£840.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="480.0">Trailer Tow Pack - Ranger (£480.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="300.0">Underbody Wax Protection (£300.00)</div>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Order Summary</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£250.00 Excl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£5,465.04 Excl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Details</h2>
+    
+<details>
+  <summary>Vehicle Details</summary>
+  <div><p>Vehicle details not found.</p></div>
+</details>
+            
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Carousel functionality
+      const slides = document.querySelector('.carousel-slides');
+      const totalSlides = slides.children.length;
+      let currentIndex = 0;
+      document.querySelector('.carousel-button.prev').addEventListener('click', function() {
+        currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+        updateCarousel();
+      });
+      document.querySelector('.carousel-button.next').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      });
+      function updateCarousel() {
+        const width = slides.clientWidth;
+        slides.style.transform = 'translateX(' + (-width * currentIndex) + 'px)';
+      }
+      window.addEventListener("resize", updateCarousel);
+      
+      // Setup single-select groups (paint colour and interior trim)
+      function setupSingleSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      // Setup multi-select group (optional extras)
+      function setupMultiSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      
+      setupSingleSelect("Choose paint colour");
+      setupSingleSelect("Choose interior trim");
+      setupMultiSelect("Choose optional extras");
+      
+      // Recalculate vehicle options total
+      function recalcOptionsTotal() {
+        let total = 0.0;
+        document.querySelectorAll('.option-entry.selected').forEach(function(opt) {
+          total += parseFloat(opt.getAttribute('data-price'));
+        });
+        document.getElementById("optionsTotal").textContent = "£" + total.toFixed(2);
+      }
+    });
+    </script>
+</body>
+</html>

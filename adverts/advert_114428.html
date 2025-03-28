@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeep Grand Cherokee - Advert</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header Styles */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .header-title {
+      color: #fff;
+      font-size: 2.5em;
+      font-family: "Cinzel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    /* Section container */
+    .section {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    /* Carousel styles */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .carousel-button.prev {
+      left: 10px;
+    }
+    .carousel-button.next {
+      right: 10px;
+    }
+    /* Order Summary table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    /* Vehicle options styling */
+    .options-group {
+      margin-bottom: 15px;
+    }
+    .option-entry {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #444;
+      color: #ccc;
+    }
+    .option-entry.selected {
+      border-color: #007BFF;
+      background-color: #00539C;
+      color: #fff;
+    }
+    .mandatory-notice {
+      background: #CF241D;
+      border: 1px solid #b21e19;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    /* Collapsible details */
+    details {
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    details summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+    /* Hide tooltip buttons */
+    .tooltip__btn { display: none; }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">Jeep Grand Cherokee</h1>
+  </header>
+  <div class="subtitle">2.0 Turbo 4xe PHEV Limited Auto Lease</div>
+  
+  <div class="section">
+    <h2>Image Gallery</h2>
+    <div class="carousel-container"><div class="carousel-slides">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/jeep-23grdcheroke4xesumitres4wdsu5b-angularfront.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/jeep-23grdcheroke4xesumitres4wdsu5b-angularrear.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/jeep-23grdcheroke4xesumitres4wdsu5b-dashboard.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/jeep-23grdcheroke4xesumitres4wdsu5b-frontseat.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/jeep-23grdcheroke4xesumitres4wdsu5b-sideview.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/jeep-23grdcheroke4xesumitres4wdsu5b-trunk.png?m=112w0pu" alt="Car Image" loading="lazy">
+</div>
+<button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+<button class="carousel-button next" aria-label="Next">&#10095;</button>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Pricing Details</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£10,365.48 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Options</h2>
+    <div class="mandatory-notice">
+      Please select at least one option from each group: <strong>Choose paint colour</strong>, 
+      <strong>Choose interior trim</strong> and <strong>Choose optional extras</strong>.
+      Any extra cost will be added as a one‑time payment.
+    </div>
+    <div class="options-group"><h3>Choose paint colour</h3>
+<div class="option-entry" data-group="Choose paint colour" data-price="875.0">Metallic - Baltic grey (£875.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="875.0">Metallic - Bright white (£875.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="875.0">Metallic - Diamond black (£875.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="875.0">Metallic - Midnight sky (£875.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="875.0">Metallic - Rocky mountain (£875.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="875.0">Metallic - Silver zynith (£875.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Velvet red (Free)</div>
+</div>
+<div class="options-group"><h3>Choose interior trim</h3>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Capri Vynil - Black (Free)</div>
+</div>
+<div class="options-group"><h3>Choose optional extras</h3>
+<div class="option-entry" data-group="Choose optional extras" data-price="-295.0">Cable Mode 3 Offset (Free)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="295.0">Mode 3 Charging Cable (£295.00)</div>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Order Summary</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£10,365.48 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Details</h2>
+    
+<details>
+  <summary>Summary vehicle data</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="true" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-0"><div class="container--content color color--default"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--otr"></span><div><strong>Manufacturer OTR Price</strong><div class="no-external-paragraph-margins content-links"><p>£72,284</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--mph"></span><div><strong>0-62 mph</strong><div class="no-external-paragraph-margins content-links"><p>6.3 Seconds</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--transmission"></span><div><strong>Transmission</strong><div class="no-external-paragraph-margins content-links"><p>Automatic</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-type-sm"></span><div><strong>Fuel Type</strong><div class="no-external-paragraph-margins content-links"><p>Petrol/PlugIn Elec Hybrid</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-cons"></span><div><strong>Fuel Economy</strong><div class="no-external-paragraph-margins content-links"><p><a aria-controls="modal-headline-economy-disclaimer" class="highlight highlight--text plain-link" data-show="#modal-headline-economy-disclaimer" href="#" style="text-decoration:none">100.9 mpg*</a> <span class="tooltip" data-cancel-click-handler=""></span></p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--co"></span><div><strong>WLTP</strong><div class="no-external-paragraph-margins content-links"><p>See Tech Spec</p></div></div></li></ul></div></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--camera"></span><div><div class="no-external-paragraph-margins content-links">Reversing Camera</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--heated-seats"></span><div><div class="no-external-paragraph-margins content-links">Heated Seats</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--park-assist"></span><div><div class="no-external-paragraph-margins content-links">Park Assist</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--cruise-control"></span><div><div class="no-external-paragraph-margins content-links">Ad. Cruise Control</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--sat-nav"></span><div><div class="no-external-paragraph-margins content-links">Sat Nav</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--alloys"></span><div><div class="no-external-paragraph-margins content-links">Alloys 20"</div></div></li></ul></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Standard equipment</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-1"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="3eceb60a-b537-4a29-88e0-b8cde2ef3d78" data-template-vis-scroll-to-parent="sm" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1"> Driver Convenience </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>10.25 " TFT display cluster</li><li>140 Mph primary speedometer</li><li>180 Amp alternator</li><li>Active lane management system</li><li>Active Noise Control</li><li>Adaptive cruise control with Stop and Go</li><li>Blind spot and cross path detection</li><li>Connectivity services</li><li>Drowsy driver detection</li><li>Electric power steering</li><li>Full speed forward collision warning</li><li>Intersection collision warning system</li><li>Map care</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Off-Road Info pages</li><li>Parksense front &amp; rear park assist</li><li>Parkview rear backup camera</li><li>PAS</li><li>Power liftgate</li><li>Public SOS only</li><li>Push button start</li><li>Radio navigation system</li><li>Speed control</li><li>Telematics box module</li><li>Traffic sign recognition</li><li>Uconnect 5 10.1" display with navigation</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2"> Engine/Drivetrain/Suspension </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>195Mm Front axle</li><li>230Mm Rear axle</li><li>3.70 Rear axle ratio</li><li>7.4 kW onboard charger</li><li>700 Amp Maintenance Free Battery</li><li>Conventional differential front axle with disconnect</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Conventional differential rear axle</li><li>Heavy duty engine cooling</li><li>Quadra-Trac Ii (R) 4Wd System</li><li>Selec Terrain system</li><li>Sport mode</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3"> Entertainment </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>2 USB charging points in 2nd row</li><li>Alpine premium audio system with subwoofer + 9 speakers</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Media hub with USB and aux input</li><li>Steering wheel mounted audio controls</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4"> Exterior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>4xe badge</li><li>Auto adjust In reverse exterior mirrors</li><li>Auto dimming exterior mirrors</li><li>Auto high beam headlamp control</li><li>Auto power folding mirrors</li><li>Automatic headlights with auto levelling</li><li>Body colour roof</li><li>Body coloured door handles</li><li>Body coloured shark fin antenna</li><li>Chrome exterior accents</li><li>Deep tint privacy glass</li><li>Door Cladding - Mold-In-Color</li><li>Dual pane electric opening panoramic sunroof</li><li>Electric front windows + drivers one touch</li><li>Exterior mirrors approach lamps</li><li>Exterior mirrors with memory function</li><li>Exterior mirrors with supplemental signals</li><li>Gloss black door mirrors</li><li>Heated exterior mirrors</li><li>High power mirrors</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Jeep + Grand Cherokee badges</li><li>LED daytime running lights with cornering function</li><li>LED front and rear fog lamps</li><li>LED reflector headlamps</li><li>LED taillamps</li><li>LED third brake light</li><li>Locking push-push fuel filler door</li><li>Lower rocker panel cladding Mic</li><li>Mic black/bright roof rails</li><li>Rain sensitive windscreen wipers</li><li>Rear side wing doors</li><li>Rear wiper</li><li>Recovery Eye</li><li>Solid paint</li><li>Tailgate door puddle lamps</li><li>Trailer sway damping</li><li>Underbody aerodynamic treatment</li><li>Upper active grille shutters</li><li>Windshield wiper de-icer</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5"> Interior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>12V Auxiliary power outlet</li><li>12v power outlet in cargo area</li><li>230V/50Hz Auxiliary power outlet</li><li>3 rear head restraints</li><li>8 way power adjustable driver seat</li><li>8 way power adjustable passenger seat</li><li>An-Teak/Satin chrome interior accents</li><li>Capri Vynil upholstery</li><li>Door trim panel vinyl armrest</li><li>Driver seat memory function</li><li>Dual zone air conditioning</li><li>Front and rear floor mats</li><li>Front and rear led map pockets</li><li>Front and rear reading lights</li><li>Front head restraints</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Heated front and rear seats</li><li>Heated steering wheel</li><li>Illuminated cup holders</li><li>Interior assist handles</li><li>Leather wrapped steering wheel</li><li>Led Chmsl Lamp</li><li>LED front footwell lights</li><li>Memory for steering column</li><li>Power tilt/telescope adjustable steering column</li><li>Rear 60/40 folding bench seat</li><li>Rear courtesy light</li><li>Single front passenger seat</li><li>Steering wheel mounted shift controls</li><li>Sun visors with illuminated vanity mirrors</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6"> Packs </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Luxury Tech group II package - Grand Cherokee</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Smokers group pack - Grand Cherokee</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7"> Passive Safety </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>3 point seatbelts on all 3 rear seats</li><li>Advanced multistage front airbags</li><li>Anti lock 4wheel Fnc disc brakes</li><li>Automatic emergency braking with pedestrian and cyclist recognition</li><li>Child seat anchor system with top tethers</li><li>Driver and passenger knee bolster air bags</li><li>Driver and passenger seat belt alert</li><li>Electric parking brake</li><li>Electronic stability control</li><li>Four-wheel traction control</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Front and rear side curtain airbags</li><li>Hill descent control</li><li>Hill start assist with Hold 'n' Go</li><li>Manual rear child locks</li><li>Occupant detection sensor - 2nd row</li><li>Passive pedestrian protection</li><li>Rear seat reminder alert</li><li>Selectable tyre fill alert</li><li>Supplemental front seat side air bags</li><li>Tyre pressure monitoring system</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8"> Security </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Alarm system</li><li>Capless fuel filler</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Speed sensitive power locks</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-9"> Trim </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-9" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Mold-in-color lower front fascia</li><li>Mold-in-color lower rear fascia</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Soft-touch instrument panel</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-10"> Wheels </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-10" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-10"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>20" Machined/painted alloy wheels</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Full size spare tyre</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Technical specification</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-2"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="f3c734cf-3076-45da-8e74-8dae8b6b2ef6" data-template-vis-scroll-to-parent="sm" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1"> Electric Vehicle Data </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Battery Capacity % guaranteed under warranty</strong> 70</li><li><strong>Battery Capacity in kWh</strong> 17.3</li><li><strong>Battery Charging Scenario 1 - Charge Time (Mins)</strong> 150</li><li><strong>Battery Charging Scenario 1 - Percentage Change</strong> 0-100</li><li><strong>Battery Charging Scenario 1 - Power Supply - kW</strong> 7.2</li><li><strong>Battery Charging Scenario 2 - Charge Time (Mins)</strong> Not Available</li><li><strong>Battery Charging Scenario 2 - Percentage Change</strong> Not Available</li><li><strong>Battery Charging Scenario 2 - Power Supply - kW</strong> Not Available</li><li><strong>Battery Charging Scenario 3 - Charge Time (Mins)</strong> Not Available</li><li><strong>Battery Charging Scenario 3 - Percentage Change</strong> Not Available</li><li><strong>Battery Charging Scenario 3 - Power Supply - kW</strong> Not Available</li><li><strong>Battery Charging Scenario 4 - Charge Time (Mins)</strong> Not Available</li><li><strong>Battery Charging Scenario 4 - Percentage Change</strong> Not Available</li><li><strong>Battery Charging Scenario 4 - Power Supply - kW</strong> Not Available</li><li><strong>Battery Leased</strong> No</li><li><strong>Battery Type</strong> Lithium-ion</li><li><strong>Charging Port Location</strong> Left Side Rear</li><li><strong>Coupler/Connector Type</strong> Type 2</li><li><strong>Maximum Charging Rate - kW</strong> 7.2</li><li><strong>Standard manufacturers Battery warranty - Mileage</strong> 100000</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Standard manufacturers Battery warranty - Years</strong> 8</li><li><strong>Usable Battery Capacity</strong> 17.3</li><li><strong>WLTP - EC AC Weighted (kWh/100km) - Comb</strong> 24.3</li><li><strong>WLTP - EC AC Weighted (kWh/100km) - Comb - TEH</strong> 24.3</li><li><strong>WLTP - EC AC Weighted (kWh/100km) - Comb - TEL</strong> 23.2</li><li><strong>WLTP - EC AC Weighted (miles/kWh) - Comb</strong> 2.6</li><li><strong>WLTP - EC AC Weighted (miles/kWh) - Comb - TEH</strong> 2.6</li><li><strong>WLTP - EC AC Weighted (miles/kWh) - Comb - TEL</strong> 2.7</li><li><strong>WLTP - Equivalent AER (km) - City</strong> 50</li><li><strong>WLTP - Equivalent AER (km) - City - TEH</strong> 50</li><li><strong>WLTP - Equivalent AER (km) - City - TEL</strong> 51</li><li><strong>WLTP - Equivalent AER (km) - Comb</strong> 46</li><li><strong>WLTP - Equivalent AER (km) - Comb - TEH</strong> 46</li><li><strong>WLTP - Equivalent AER (km) - Comb - TEL</strong> 48</li><li><strong>WLTP - Equivalent AER (miles) - City</strong> 31.1</li><li><strong>WLTP - Equivalent AER (miles) - City - TEH</strong> 31.1</li><li><strong>WLTP - Equivalent AER (miles) - City - TEL</strong> 31.7</li><li><strong>WLTP - Equivalent AER (miles) - Comb</strong> 28.6</li><li><strong>WLTP - Equivalent AER (miles) - Comb - TEH</strong> 28.6</li><li><strong>WLTP - Equivalent AER (miles) - Comb - TEL</strong> 29.8</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2"> Emissions - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Standard Euro Emissions</strong> EURO 6</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"></ul></div></div></div></div><div class="row"><div class="col col--first align align--left"><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><br/><p class="small"><strong>Please note:</strong> Please note all data is supplied by the manufacturer based on Government approved testing. During "real world" usage these figures may vary based on your own specific driving style, road and weather conditions. To understand these more fully please refer to the manufacturer and/or a franchised supplier.</p></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3"> Emissions - PHEV </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - CO2 Charge Depleting (g/km) - Comb</strong> 240</li><li><strong>WLTP - CO2 Charge Depleting (g/km) - Comb - TEH</strong> 240</li><li><strong>WLTP - CO2 Charge Depleting (g/km) - Comb - TEL</strong> 232</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - CO2 Weighted (g/km) - Comb</strong> 66</li><li><strong>WLTP - CO2 Weighted (g/km) - Comb - TEH</strong> 66</li><li><strong>WLTP - CO2 Weighted (g/km) - Comb - TEL</strong> 61</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4"> Engine and Drive Train </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Camshaft</strong> DOHC</li><li><strong>Catalytic Convertor</strong> Yes</li><li><strong>CC</strong> 1995</li><li><strong>Compression Ratio</strong> 10.0:1</li><li><strong>Cylinder Layout</strong> IN-LINE</li><li><strong>Cylinders</strong> 4</li><li><strong>Cylinders - Bore (mm)</strong> 84</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Cylinders - Stroke (mm)</strong> 90</li><li><strong>Engine Layout</strong> FRONT TRANSVERSE</li><li><strong>Fuel Delivery</strong> DIRECT INJECTION</li><li><strong>Gears</strong> 8 SPEED</li><li><strong>Number of Valves</strong> 16</li><li><strong>Transmission</strong> AUTO</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5"> Fuel Consumption - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>EC Directive 1999/100/EC Applies</strong> No</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6"> Fuel Consumption - PHEV </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - FC Ch Sus (l/100km) - Comb</strong> 10.6</li><li><strong>WLTP - FC Ch Sus (l/100km) - Comb - TEH</strong> 10.6</li><li><strong>WLTP - FC Ch Sus (l/100km) - Comb - TEL</strong> 10.2</li><li><strong>WLTP - FC Ch Sus (mpg) - Comb</strong> 26.6</li><li><strong>WLTP - FC Ch Sus (mpg) - Comb - TEH</strong> 26.6</li><li><strong>WLTP - FC Ch Sus (mpg) - Comb - TEL</strong> 27.7</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - FC Weighted (l/100km) - Comb</strong> 2.8</li><li><strong>WLTP - FC Weighted (l/100km) - Comb - TEH</strong> 2.8</li><li><strong>WLTP - FC Weighted (l/100km) - Comb - TEL</strong> 2.6</li><li><strong>WLTP - FC Weighted (mpg) - Comb</strong> 100.9</li><li><strong>WLTP - FC Weighted (mpg) - Comb - TEH</strong> 100.9</li><li><strong>WLTP - FC Weighted (mpg) - Comb - TEL</strong> 108.6</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7"> General </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>AdBlue</strong> No</li><li><strong>Alternative Fuel Qualifying</strong> Yes</li><li><strong>Badge Engine CC</strong> 2.0</li><li><strong>Badge Power</strong> 381</li><li><strong>Based On ID</strong> Not Available</li><li><strong>Coin Description</strong> Turbo 4xe [380]</li><li><strong>Coin Series</strong> Limited</li><li><strong>Did at least one aspect of this vehicle's safety give cause for concern?</strong> No</li><li><strong>Insurance Group 1 - 50 Effective January 07</strong> 48E</li><li><strong>NCAP Adult Occupant Protection %</strong> 84</li><li><strong>NCAP Child Occupant Protection %</strong> 89</li><li><strong>NCAP Overall Rating - Effective February 09</strong> 5</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>NCAP Pedestrian Protection %</strong> 81</li><li><strong>NCAP Safety Assist %</strong> 81</li><li><strong>Service Interval Frequency - Months</strong> 12</li><li><strong>Service Interval Mileage</strong> 7500</li><li><strong>Special Edition</strong> No</li><li><strong>Special Order</strong> No</li><li><strong>Standard manufacturers warranty - Mileage</strong> 60000</li><li><strong>Standard manufacturers warranty - Years</strong> 3</li><li><strong>Timing Belt Interval Frequency - Months</strong> Not Available</li><li><strong>Timing Belt Interval Mileage</strong> Not Available</li><li><strong>Vehicle Homologation Class</strong> M1</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8"> Performance </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>0 to 62 mph (secs)</strong> 6.3</li><li><strong>Engine Power - BHP</strong> 381</li><li><strong>Engine Power - KW</strong> 280</li><li><strong>Engine Power - RPM</strong> 5250</li><li><strong>Engine Torque - LBS.FT</strong> 470</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Engine Torque - MKG</strong> 65</li><li><strong>Engine Torque - NM</strong> 637</li><li><strong>Engine Torque - RPM</strong> 3000</li><li><strong>Top Speed</strong> 131</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9"> Test Cycles </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Emissions Test Cycle</strong> WLTP</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>RDE Certification Level</strong> RDE 2</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-10"> Tyres </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-10" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-10"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Alloys?</strong> Yes</li><li><strong>Space Saver?</strong> No</li><li><strong>Tyre Size Front</strong> 265/50 R20</li><li><strong>Tyre Size Rear</strong> 265/50 R20</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Tyre Size Spare</strong> FULL SIZE</li><li><strong>Wheel Style</strong> Not Available</li><li><strong>Wheel Type</strong> 20" ALLOY</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-11"> Vehicle Dimensions </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-11" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-11"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Height</strong> 1795</li><li><strong>Length</strong> 4914</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Wheelbase</strong> 2964</li><li><strong>Width</strong> 2149</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-12"> Weight and Capacities </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-12" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-12"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Fuel Tank Capacity (Litres)</strong> 72</li><li><strong>Gross Vehicle Weight</strong> 3075</li><li><strong>Luggage Capacity (Seats Down)</strong> 1463</li><li><strong>Luggage Capacity (Seats Up)</strong> 533</li><li><strong>Max. Loading Weight</strong> 641</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Max. Towing Weight - Unbraked</strong> 750</li><li><strong>Minimum Kerbweight</strong> 2434</li><li><strong>No. of Seats</strong> 5</li><li><strong>Turning Circle - Kerb to Kerb</strong> 11.7</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Carousel functionality
+      const slides = document.querySelector('.carousel-slides');
+      const totalSlides = slides.children.length;
+      let currentIndex = 0;
+      document.querySelector('.carousel-button.prev').addEventListener('click', function() {
+        currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+        updateCarousel();
+      });
+      document.querySelector('.carousel-button.next').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      });
+      function updateCarousel() {
+        const width = slides.clientWidth;
+        slides.style.transform = 'translateX(' + (-width * currentIndex) + 'px)';
+      }
+      window.addEventListener("resize", updateCarousel);
+      
+      // Setup single-select groups (paint colour and interior trim)
+      function setupSingleSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      // Setup multi-select group (optional extras)
+      function setupMultiSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      
+      setupSingleSelect("Choose paint colour");
+      setupSingleSelect("Choose interior trim");
+      setupMultiSelect("Choose optional extras");
+      
+      // Recalculate vehicle options total
+      function recalcOptionsTotal() {
+        let total = 0.0;
+        document.querySelectorAll('.option-entry.selected').forEach(function(opt) {
+          total += parseFloat(opt.getAttribute('data-price'));
+        });
+        document.getElementById("optionsTotal").textContent = "£" + total.toFixed(2);
+      }
+    });
+    </script>
+</body>
+</html>

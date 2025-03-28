@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audi A8 Saloon - Advert</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header-title {
+      color: #fff;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    /* Top container: Carousel + Pricing */
+    .top-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .gallery-container {
+      flex: 2;
+      min-width: 300px;
+      position: relative;
+    }
+    .pricing-container {
+      flex: 1;
+      min-width: 250px;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      border-radius: 4px;
+      height: fit-content;
+    }
+    /* Bootstrap-style Carousel for main images */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .carousel-item {
+      display: none;
+      position: relative;
+      transition: opacity 0.5s ease;
+    }
+    .carousel-item.active {
+      display: block;
+      opacity: 1;
+    }
+    .carousel-item img {
+      width: 100%;
+      object-fit: contain;
+    }
+    .carousel-indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-indicators li {
+      background-color: #ccc;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+    .carousel-indicators .active {
+      background-color: #f70c0c;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      padding: 0 10px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .carousel-control-prev {
+      left: -40px;
+    }
+    .carousel-control-next {
+      right: -40px;
+    }
+    /* Thumbnail selector below carousel */
+    .thumb-container {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .thumb-container img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid #444;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .thumb-container img.selected {
+      border-color: #007BFF;
+    }
+    /* Order Summary Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #555;
+      text-align: left;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    /* Vehicle Options */
+    .options-group {
+      margin-bottom: 15px;
+    }
+    .option-entry {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #444;
+      color: #ccc;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .option-entry.selected {
+      border-color: #007BFF;
+      background-color: #00539C;
+      color: #fff;
+    }
+    .mandatory-notice {
+      background: #CF241D;
+      border: 1px solid #b21e19;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    /* Collapsible details */
+    details {
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    details summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+    /* Hide tooltip buttons */
+    .tooltip__btn { display: none; }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">Audi A8 Saloon</h1>
+  </header>
+  <div class="subtitle">50 TDI Quattro Black Edition Tiptronic Lease</div>
+  
+  <div class="top-container">
+    <div class="gallery-container">
+      <h2>Image Gallery</h2>
+      
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5" class=""></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-angularfront.png?m=312w0pu05050505" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-angularrear.png?m=312w0pu05050505" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-dashboard.png?m=112w0pu" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-frontseat.png?m=112w0pu" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-sideview.png?m=312w0pu05050505" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-trunk.png?m=112w0pu" loading="lazy">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button">
+    <img src="https://www.leama.co.uk/dist/img/left.svg" style="width: 60px; height: 60px;">
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button">
+    <img src="https://www.leama.co.uk/dist/img/right.svg" style="width: 60px; height: 60px;">
+    <span class="sr-only"></span>
+  </a>
+</div>
+
+      <div class="thumb-container">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-angularfront.png?m=312w0pu05050505" class="selected" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-angularrear.png?m=312w0pu05050505" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-dashboard.png?m=112w0pu" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-frontseat.png?m=112w0pu" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-sideview.png?m=312w0pu05050505" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/audi-25a8l50sport4wdsd4rbuk-trunk.png?m=112w0pu" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+</div>
+
+    </div>
+    <div class="pricing-container">
+      <h2>Pricing Details</h2>
+      <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Monthly Price</td><td>£966.15</td></tr>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£11,593.80 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Options</h2>
+    <div class="mandatory-notice">
+      Please select at least one option from each group: <strong>Choose paint colour</strong>, 
+      <strong>Choose interior trim</strong> and <strong>Choose optional extras</strong>.
+    </div>
+    <div class="options-group"><h3>Choose paint colour</h3>
+<div class="option-entry" data-group="Choose paint colour" data-price="6750.0">Audi Exclusive - Custom (£6750.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Firmament blue (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Floret silver (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Glacier white (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Madeira brown (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Mythos black (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Ultra blue (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Pearl - Daytona grey (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Brilliant black (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Sebring black (Free)</div>
+</div>
+<div class="options-group"><h3>Choose interior trim</h3>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Valcona leather - Black with steel grey stitching + front sports seats in diamond quilted S embossed logo (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Valcona leather - Cognac with steel grey stitching + front sports seats in diamond quilted S embossed logo (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Valcona leather - Merlot red with rock grey stitching + front sports seats in diamond quilted S embossed logo (Free)</div>
+</div>
+<div class="options-group"><h3>Choose optional extras</h3>
+<div class="option-entry" data-group="Choose optional extras" data-price="150.0">20" 10 Y Spoke Anthracite Black Gloss Turned Finish Alloy Wheels (£150.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="150.0">20" 10 Parallel Spoke Design Partly Polished Contrasting Grey Alloy Wheels (£150.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="150.0">20" 20 Spoke Design Contrasting Grey Partly Polished Alloy Wheels (£150.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="650.0">21" 7 Arm Dynamic Audi Sport Alloy Wheels (£650.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1160.0">Audi Warranty - 4 Years Or 75000 Miles (£1160.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2850.0">Audi Warranty - 5 Years Or 90000 Miles (£2850.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="0.0">Body Colour Exterior Mirror Housings (Free)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1475.0">City Assist Pack - A8 (£1475.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1325.0">Electrically Swivelling Trailer Towing Hitch (£1325.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2450.0">Extended Leather Pack - A8 (£2450.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="250.0">Heated Twin-spoke Leather Multi-function Steering Wheel With Shift Paddles - 1XP (£250.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="850.0">Leather Pack - S8 (£850.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="205.0">Load Through Hatch (£205.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1700.0">Panoramic Glass Roof (£1700.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="205.0">Space Saver Spare Wheel (£205.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="0.0">Tool Kit And Jack (Free)</div>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Order Summary</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Monthly Price</td><td>£966.15</td></tr>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£11,593.80 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Details</h2>
+    
+<details>
+  <summary>Summary vehicle data</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="true" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-0"><div class="container--content color color--default"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--otr"></span><div><strong>Manufacturer OTR Price</strong><div class="no-external-paragraph-margins content-links"><p>£88,270</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--mph"></span><div><strong>0-62 mph</strong><div class="no-external-paragraph-margins content-links"><p>5.9 Seconds</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--transmission"></span><div><strong>Transmission</strong><div class="no-external-paragraph-margins content-links"><p>Semi Automatic</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-type-sm"></span><div><strong>Fuel Type</strong><div class="no-external-paragraph-margins content-links"><p>Diesel</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-cons"></span><div><strong>Fuel Economy</strong><div class="no-external-paragraph-margins content-links"><p><a aria-controls="modal-headline-economy-disclaimer" class="highlight highlight--text plain-link" data-show="#modal-headline-economy-disclaimer" href="#" style="text-decoration:none">39.2 mpg*</a> <span class="tooltip" data-cancel-click-handler=""></span></p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--co"></span><div><strong>WLTP</strong><div class="no-external-paragraph-margins content-links"><p>See Tech Spec</p></div></div></li></ul></div></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--camera"></span><div><div class="no-external-paragraph-margins content-links">Reversing Camera</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--park-sensors"></span><div><div class="no-external-paragraph-margins content-links">Front &amp; Rear Sensors</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--mobile-phone"></span><div><div class="no-external-paragraph-margins content-links">Android &amp; CarPlay</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--heated-seats"></span><div><div class="no-external-paragraph-margins content-links">Heated Seats</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--cruise-control"></span><div><div class="no-external-paragraph-margins content-links">Ad. Cruise Control</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--alloys"></span><div><div class="no-external-paragraph-margins content-links">Alloys 20"</div></div></li></ul></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Standard equipment</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-1"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="3eceb60a-b537-4a29-88e0-b8cde2ef3d78" data-template-vis-scroll-to-parent="sm" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1"> Driver Convenience </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>'Lights On' Reminder warning buzzer</li><li>Adaptive cruise control with cruise assist, emergency assist, efficiency assist, swerve assist, turn assist and speed limiter</li><li>Audi connect safety and service (e-call)</li><li>Audi drive select</li><li>Audi parking system plus with front and rear sensors</li><li>Audi smartphone interface with app store includes wireless Apple carplay, Android auto and Amazon alexa integration</li><li>Audi virtual cockpit</li><li>Bluetooth interface</li><li>Camera based traffic sign recognition</li><li>Convenience key</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Electro - mechanical power assisted steering</li><li>Head up Display</li><li>MMI navigation plus with MMI touch + Twin touch screens with haptic feedback</li><li>Operating buttons in black, glass look with haptic feedback including extended aluminium look</li><li>Power door closure</li><li>Power operated tailgate</li><li>Rear view camera</li><li>Remote fuel filler release</li><li>Service interval indicator</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2"> Engine/Drivetrain/Suspension </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>24 litre AdBlue tank</li><li>48V Mild hybrid technology</li><li>8 speed transmission with hill hold assist</li><li>82 litre fuel tank</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Adaptive air suspension</li><li>Diesel particulate filter</li><li>Quattro all wheel drive with self locking centre differential</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3"> Entertainment </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Audi music interface</li><li>Audi sound system</li><li>DAB digital radio module</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>MMI radio plus</li><li>USB connection</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4"> Exterior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Acoustic double glazing</li><li>All-weather, manoeuvring, position, static cornering, turning and motorway lights with automatic dynamic headlight range control</li><li>Audi space frame</li><li>Auto dimming rear view mirror</li><li>Black exterior door mirrors</li><li>Body colour bumpers</li><li>Electric front windows</li><li>Electric rear windows with isolation switch</li><li>Electric sunblinds for rear window and rear door windows</li><li>Electrically adjustable heated folding + automatically dimming exterior mirrors with memory function and integrated LED indicators</li><li>Front wash/wipe with interval delay</li><li>HD matrix LED headlights with dynamic light presentation and dynamic indicators</li><li>Headlight cleaning system</li><li>Heat insulating darkened glass in side and rear windows</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Heat insulating glass windscreen</li><li>Heated rear window</li><li>Heated windscreen washer jets</li><li>High beam assist</li><li>LED brake lights</li><li>LED daytime running lights</li><li>LED third brake light</li><li>Metallic paint</li><li>OLED rear lights with changeable rear light signature</li><li>Privacy glass</li><li>Rear boot</li><li>Rear side wing doors</li><li>Welcome/leaving lighting</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5"> Interior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>12V socket</li><li>2 zone automatic air conditioning</li><li>3 seat rear bench with centre armrest in 2nd row</li><li>3 spoke leather multifunction steering wheel with gear shift paddles</li><li>4 way electric lumbar support for driver and front passenger</li><li>Audi phone box light</li><li>Black cloth headlining</li><li>Centre console with cupholders</li><li>Comfort centre armrest</li><li>Door armrest with storage</li><li>Door pockets with bottle holder</li><li>Driver and front passenger side sunvisors with illuminated vanity mirrors</li><li>Dust/pollen filters</li><li>Electric front seats with memory function</li><li>Front floor mats</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Glove compartment cooling</li><li>Heated front seats</li><li>Height/reach electric steering column with easy exit function</li><li>Illuminated door sill trims with aluminium inlays and S diamond emblem</li><li>Isofix child seat mounting points on outer rear seats</li><li>Leather gearknob</li><li>Passenger footwell storage net</li><li>Reading lights</li><li>Rear floor mats</li><li>Rear headrests</li><li>Roof mounted sunglasses holder</li><li>Single front passenger seat</li><li>Stainless steel pedals and footrest</li><li>Valcona leather upholstery with front sports seats in diamond quilted with S embossed logo</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6"> Packs </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Black exterior styling pack - A8 Black Edition</li><li>Chrome exterior pack - A8</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Extended LED Interior multi coloured light pack - A8</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7"> Passive Safety </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>3 point seatbelts on all rear seats</li><li>ABS/EBD</li><li>Active front headrest system</li><li>ASR traction control</li><li>Audi pre sense basic</li><li>Audi pre sense front</li><li>Black brake calipers</li><li>Driver/Front Passenger airbags</li><li>EDL traction control</li><li>Electromechanical parking brake</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>ESP</li><li>Extended pedestrian protection measures</li><li>Front and rear disc brakes</li><li>Front and rear side airbags with head airbag system</li><li>Front passenger airbag deactivation</li><li>Rear child proof door locks</li><li>Seatbelt reminder + electric contact in buckle + advanced safety equipment</li><li>Tyre pressure loss indicator</li><li>Warning triangle and first aid kit</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8"> Security </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Anti theft alarm tow away protection</li><li>Anti-theft wheel bolts and wheel loosening detection</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Remote central locking</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-9"> Trim </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-9" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Carbon vector upper inlays</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Dark matt brushed aluminium lower inlays</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-10"> Wheels </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-10" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-10"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>20" 5 V spoke star design audi sport cast alloy wheels in gloss anthracite black with diamond turned finish</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Tyre repair kit</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Technical specification</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-2"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="f3c734cf-3076-45da-8e74-8dae8b6b2ef6" data-template-vis-scroll-to-parent="sm" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1"> Emissions - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>HC</strong> Not Available</li><li><strong>Standard Euro Emissions</strong> EURO 6</li><li><strong>WLTP - CO2 (g/km) - Comb</strong> 189</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - CO2 (g/km) - Comb - TEH</strong> 195</li><li><strong>WLTP - CO2 (g/km) - Comb - TEL</strong> 189</li></ul></div></div></div></div><div class="row"><div class="col col--first align align--left"><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><br/><p class="small"><strong>Please note:</strong> Please note all data is supplied by the manufacturer based on Government approved testing. During "real world" usage these figures may vary based on your own specific driving style, road and weather conditions. To understand these more fully please refer to the manufacturer and/or a franchised supplier.</p></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2"> Engine and Drive Train </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Camshaft</strong> DOHC</li><li><strong>Catalytic Convertor</strong> Yes</li><li><strong>CC</strong> 2967</li><li><strong>Cylinder Layout</strong> V6</li><li><strong>Cylinders</strong> 6</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Engine Layout</strong> NORTH SOUTH</li><li><strong>Fuel Delivery</strong> COMMON RAIL</li><li><strong>Gears</strong> 8 SPEED</li><li><strong>Number of Valves</strong> 24</li><li><strong>Transmission</strong> SEMI-AUTO</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3"> Fuel Consumption - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>EC Directive 1999/100/EC Applies</strong> No</li><li><strong>WLTP - FC (l/100km) - Comb</strong> 7.2</li><li><strong>WLTP - FC (l/100km) - Comb - TEH</strong> 7.4</li><li><strong>WLTP - FC (l/100km) - Comb - TEL</strong> 7.2</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - MPG - Comb</strong> 39.2</li><li><strong>WLTP - MPG - Comb - TEH</strong> 38.2</li><li><strong>WLTP - MPG - Comb - TEL</strong> 39.2</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4"> General </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>AdBlue</strong> Yes</li><li><strong>Alternative Fuel Qualifying</strong> No</li><li><strong>Badge Engine CC</strong> 3.0</li><li><strong>Badge Power</strong> 286</li><li><strong>Based On ID</strong> Not Available</li><li><strong>Coin Description</strong> TDI Quattro</li><li><strong>Coin Series</strong> Black Edition</li><li><strong>Did at least one aspect of this vehicle's safety give cause for concern?</strong> No</li><li><strong>Generation Mark</strong> 4</li><li><strong>Insurance Group 1 - 50 Effective January 07</strong> 49E</li><li><strong>Manufacturers Corrosion Perforation Guarantee - Years</strong> 12</li><li><strong>Manufacturers Paintwork Guarantee - Years</strong> 3</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>NCAP Adult Occupant Protection %</strong> Not Available</li><li><strong>NCAP Child Occupant Protection %</strong> Not Available</li><li><strong>NCAP Overall Rating - Effective February 09</strong> Not Available</li><li><strong>NCAP Pedestrian Protection %</strong> Not Available</li><li><strong>NCAP Safety Assist %</strong> Not Available</li><li><strong>Service Interval Frequency - Months</strong> 24</li><li><strong>Service Interval Mileage</strong> 18000</li><li><strong>Special Edition</strong> No</li><li><strong>Special Order</strong> No</li><li><strong>Standard manufacturers warranty - Mileage</strong> 60000</li><li><strong>Standard manufacturers warranty - Years</strong> 3</li><li><strong>Vehicle Homologation Class</strong> M1</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5"> Performance </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>0 to 62 mph (secs)</strong> 5.9</li><li><strong>Engine Power - BHP</strong> 286</li><li><strong>Engine Power - KW</strong> 210</li><li><strong>Engine Power - RPM</strong> 3500</li><li><strong>Engine Torque - LBS.FT</strong> 443</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Engine Torque - MKG</strong> 61.2</li><li><strong>Engine Torque - NM</strong> 600</li><li><strong>Engine Torque - RPM</strong> 2250</li><li><strong>Top Speed</strong> 155</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6"> Test Cycles </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Emissions Test Cycle</strong> WLTP</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>RDE Certification Level</strong> RDE 2</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7"> Tyres </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Alloys?</strong> Yes</li><li><strong>Space Saver?</strong> No</li><li><strong>Tyre Size Front</strong> 265/40 R20</li><li><strong>Tyre Size Rear</strong> 265/40 R20</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Tyre Size Spare</strong> TYRE REPAIR KIT</li><li><strong>Wheel Style</strong> 5 V SPOKE STAR</li><li><strong>Wheel Type</strong> 20" ALLOY</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8"> Vehicle Dimensions </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Height</strong> 1473</li><li><strong>Height (including roof rails)</strong> Not Available</li><li><strong>Length</strong> 5190</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Wheelbase</strong> 2998</li><li><strong>Width</strong> Not Available</li><li><strong>Width (including mirrors)</strong> 2130</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9"> Weight and Capacities </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Fuel Tank Capacity (Litres)</strong> 82</li><li><strong>Gross Vehicle Weight</strong> 2710</li><li><strong>Luggage Capacity (Seats Down)</strong> Not Available</li><li><strong>Luggage Capacity (Seats Up)</strong> 505</li><li><strong>Max. Loading Weight</strong> 690</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Max. Towing Weight - Braked</strong> 2300</li><li><strong>Max. Towing Weight - Unbraked</strong> 750</li><li><strong>Minimum Kerbweight</strong> 2020</li><li><strong>No. of Seats</strong> 5</li><li><strong>Turning Circle - Kerb to Kerb</strong> 12.5</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Main Carousel functionality (Bootstrap-style)
+      let currentIndex = 0;
+      const items = document.querySelectorAll('.carousel-item');
+      const indicators = document.querySelectorAll('.carousel-indicators li');
+      
+      function showSlide(index) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === index);
+          if (indicators[i]) {
+            indicators[i].classList.toggle('active', i === index);
+          }
+        });
+        // Update thumbnail selector.
+        const thumbs = document.querySelectorAll('.thumb-container img');
+        thumbs.forEach((thumb, i) => {
+          thumb.classList.toggle('selected', i === index);
+        });
+      }
+      
+      // Set click events on indicators.
+      indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => {
+          currentIndex = i;
+          showSlide(currentIndex);
+        });
+      });
+      
+      // Set click events on carousel controls.
+      document.querySelector('.carousel-control-prev').addEventListener('click', function(e) {
+        e.preventDefault();
+        currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+        showSlide(currentIndex);
+      });
+      
+      document.querySelector('.carousel-control-next').addEventListener('click', function(e) {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+      });
+      
+      // Auto-cycle every 10 seconds.
+      setInterval(function() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+      }, 10000);
+      
+      // Thumbnail selector: update main carousel when a thumbnail is clicked.
+      const thumbImages = document.querySelectorAll('.thumb-container img');
+      thumbImages.forEach((img, i) => {
+        img.addEventListener('click', () => {
+          currentIndex = i;
+          showSlide(currentIndex);
+        });
+      });
+      
+      // Vehicle Options: setup single-select and multi-select.
+      function setupSingleSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      function setupMultiSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      
+      setupSingleSelect("Choose paint colour");
+      setupSingleSelect("Choose interior trim");
+      setupMultiSelect("Choose optional extras");
+      
+      function recalcOptionsTotal() {
+        let total = 0.0;
+        document.querySelectorAll('.option-entry.selected').forEach(function(opt) {
+          total += parseFloat(opt.getAttribute('data-price'));
+        });
+        document.getElementById("optionsTotal").textContent = "£" + total.toFixed(2);
+      }
+    });
+    </script>
+</body>
+</html>

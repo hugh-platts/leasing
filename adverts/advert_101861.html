@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMW Z4 Roadster - Advert</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header Styles */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .header-title {
+      color: #fff;
+      font-size: 2.5em;
+      font-family: "Cinzel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    /* Section container */
+    .section {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    /* Carousel styles */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .carousel-button.prev {
+      left: 10px;
+    }
+    .carousel-button.next {
+      right: 10px;
+    }
+    /* Order Summary table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    /* Vehicle options styling */
+    .options-group {
+      margin-bottom: 15px;
+    }
+    .option-entry {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #444;
+      color: #ccc;
+    }
+    .option-entry.selected {
+      border-color: #007BFF;
+      background-color: #00539C;
+      color: #fff;
+    }
+    .mandatory-notice {
+      background: #CF241D;
+      border: 1px solid #b21e19;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    /* Collapsible details */
+    details {
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    details summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+    /* Hide tooltip buttons */
+    .tooltip__btn { display: none; }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">BMW Z4 Roadster</h1>
+  </header>
+  <div class="subtitle">sDrive M40i Auto (Shadowline Plus) Lease</div>
+  
+  <div class="section">
+    <h2>Image Gallery</h2>
+    <div class="carousel-container"><div class="carousel-slides">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-24z4m40irs3fb-angularfront.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-24z4m40irs3fb-angularrear.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-24z4m40irs3fb-dashboard.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-24z4m40irs3fb-frontseat.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-24z4m40irs3fb-sideview.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-24z4m40irs3fb-trunk.png?m=112w0pu" alt="Car Image" loading="lazy">
+</div>
+<button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+<button class="carousel-button next" aria-label="Next">&#10095;</button>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Pricing Details</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£9,114.24 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Options</h2>
+    <div class="mandatory-notice">
+      Please select at least one option from each group: <strong>Choose paint colour</strong>, 
+      <strong>Choose interior trim</strong> and <strong>Choose optional extras</strong>.
+      Any extra cost will be added as a one‑time payment.
+    </div>
+    <div class="options-group"><h3>Choose paint colour</h3>
+<div class="option-entry" data-group="Choose paint colour" data-price="1880.0">Individual paint - Frozen grey (£1880.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Black sapphire (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Portimao blue (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - San Francisco red (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - San remo green (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Skyscraper grey (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Metallic - Thundernight (Free)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Alpine white (Free)</div>
+</div>
+<div class="options-group"><h3>Choose interior trim</h3>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">High gloss black interior trim (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Mesh effect aluminium interior trim (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Vernasca leather - Black with decorative stitching (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Vernasca leather - Cognac with decorative stitching (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Vernasca leather - Ivory white with decorative stitching (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Vernasca leather - Magma red with decorative stitching (Free)</div>
+</div>
+<div class="options-group"><h3>Choose optional extras</h3>
+<div class="option-entry" data-group="Choose optional extras" data-price="525.0">Comfort Pack - Z4 M40i (£525.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="945.0">Driving Assistant Package - Z4 (£945.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="385.0">Enhanced Bluetooth With Wireless Charging (£385.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="440.0">Harman/Kardon Loudspeaker System (£440.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="185.0">Heated Steering Wheel (£185.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="550.0">Parking Assistant Pack - Z4 (£550.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="275.0">Soft Top - Anthracite Silver With Opening/closing Function Up To 30mph (£275.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="945.0">Visibility Package - Z4 (£945.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="0.0">Wi-Fi Hotspot (Free)</div>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Order Summary</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£9,114.24 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Details</h2>
+    
+<details>
+  <summary>Summary vehicle data</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="true" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-0"><div class="container--content color color--default"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--otr"></span><div><strong>Manufacturer OTR Price</strong><div class="no-external-paragraph-margins content-links"><p>£57,610</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--mph"></span><div><strong>0-62 mph</strong><div class="no-external-paragraph-margins content-links"><p>4.5 Seconds</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--transmission"></span><div><strong>Transmission</strong><div class="no-external-paragraph-margins content-links"><p>Semi Automatic</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-type-sm"></span><div><strong>Fuel Type</strong><div class="no-external-paragraph-margins content-links"><p>Petrol</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-cons"></span><div><strong>Fuel Economy</strong><div class="no-external-paragraph-margins content-links"><p><a aria-controls="modal-headline-economy-disclaimer" class="highlight highlight--text plain-link" data-show="#modal-headline-economy-disclaimer" href="#" style="text-decoration:none">35.3 mpg*</a> <span class="tooltip" data-cancel-click-handler=""></span></p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--co"></span><div><strong>WLTP</strong><div class="no-external-paragraph-margins content-links"><p>See Tech Spec</p></div></div></li></ul></div></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--park-sensors"></span><div><div class="no-external-paragraph-margins content-links">Front &amp; Rear Sensors</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--heated-seats"></span><div><div class="no-external-paragraph-margins content-links">Heated Seats</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--cruise-control"></span><div><div class="no-external-paragraph-margins content-links">Cruise Control</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--air-con"></span><div><div class="no-external-paragraph-margins content-links">Air Con</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--bluetooth"></span><div><div class="no-external-paragraph-margins content-links">Bluetooth</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--usb"></span><div><div class="no-external-paragraph-margins content-links">USB</div></div></li></ul></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Standard equipment</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-1"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="3eceb60a-b537-4a29-88e0-b8cde2ef3d78" data-template-vis-scroll-to-parent="sm" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1"> Driver Convenience </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Active Guard</li><li>Bluetooth hands free telephone connection with USB audio interface + audio streaming</li><li>BMW ConnectedDrive online services</li><li>BMW Live Cockpit Professional with nav function/12.3" high resolution instrument +10.25" control display/Intelligent Voice Assist/2 USB/WiFi interface</li><li>BMW Teleservices</li><li>Condition based service</li><li>Cruise control with braking function</li><li>Front and rear parking sensors</li><li>Fuel gauge</li><li>iDrive touch controller with turn and press function</li><li>Instrument cluster</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Language version English</li><li>Oil sensor for level and grade, warning by check control system</li><li>Oil temperature gauge</li><li>Optimum shift indicator</li><li>Pull away assistant</li><li>Run flat indicator</li><li>Speed limiter</li><li>Speedometer with mph readout</li><li>Tachometer</li><li>Variable sport steering</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2"> Engine/Drivetrain/Suspension </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Adaptive M suspension</li><li>Double joint spring</li><li>Double VANOS</li><li>Drive performance control with ECO PRO comfort + sport mode</li><li>Eight speed steptronic sport transmission, with gearshift paddles</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Fuel tank breather system</li><li>High precision injection</li><li>M Sport differential</li><li>Safety battery terminal clamp</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3"> Entertainment </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>2x USB Type C ports in front centre console for charging and data transfer</li><li>2x USB Type C ports in rear centre console for charging</li><li>DAB tuner</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>HiFi loudspeaker system</li><li>USB connection</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4"> Exterior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Automatic headlight beam throw control with load dependent regulating reaction, dynamic compensation of braking dive and acceleration squat</li><li>Door sill finishers with M designation</li><li>Door sill strips</li><li>Dynamic braking lights comprising activated hazard warning flashers</li><li>Electric heated rear window</li><li>Exhaust tailpipe - split left and right</li><li>Fingertip control / anti-trap function on electric window</li><li>Follow me home headlight function</li><li>Front and rear bumper system with replaceable deformation elements</li><li>Green tinted heat protection glazing</li><li>Heated windscreen washer jets</li><li>Kidney grille in mesh design</li><li>LED 3rd brake light</li><li>LED daytime driving lights</li><li>LED Indicators</li><li>LED rear lights</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Lightweight engineering</li><li>Low and high beam headlights in Bi-LED</li><li>Matt black window recess finisher</li><li>Model logo</li><li>Preparation for high beam assistant</li><li>Rain sensor</li><li>Rear boot</li><li>Reversing light</li><li>Soft top - Black</li><li>Solid paint</li><li>Tailgate release handle</li><li>Two stage brake force display</li><li>Visible VIN plate</li><li>Welcome lighting</li><li>Wind deflector</li><li>Windscreen wipers with adjustable interval</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5"> Interior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>12V power point in luggage area</li><li>12V power socket in front storage compartment</li><li>3 spoke M sport leather multifunction steering wheel</li><li>Activation of interior lighting</li><li>Additional storage compartment - 4 lashing eyes, strap and storage net</li><li>Battery in luggage compartment</li><li>BMW ID</li><li>Child seat ISOFIX attachments for passenger seat</li><li>Driver and front passenger heated seats</li><li>Electrically adjustable front driver and passenger seats with memory</li><li>Four way electrically adjustable driver and front passenger lumbar support</li><li>Front and rear velour floor mats</li><li>Front centre armrest with 2 cupholders</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Front door armrests</li><li>Front headrests</li><li>Height adjustable mechanically and infinitely variable steering column</li><li>Illuminated glovebox</li><li>Luggage compartment light</li><li>M Sport seats for driver and passenger</li><li>Microfilter and active carbon filter</li><li>Single front passenger seat</li><li>Sunvisors with vanity mirrors and ticket pocket</li><li>Through load system</li><li>Two zone automatic air conditioning</li><li>Vernasca leather upholstery</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6"> Packs </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Ambient lighting pack - Z4</li><li>Connected package professional - Z4</li><li>Interior and exterior mirror pack - Z4</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>M Aerodynamic pack - Z4</li><li>Shadowline plus pack - Z4</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7"> Passive Safety </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>3 point front seat belts</li><li>Airbags - Front driver and passenger, front and side impact protection</li><li>Anti lock braking system (ABS) with brake assist</li><li>Automatic Stability Control (ASC)</li><li>BMW emergency call</li><li>Brake energy regeneration</li><li>Braking readiness</li><li>Cornering brake control (CBC)</li><li>Crash sensor</li><li>Curtain airbags</li><li>Deactivation of fuel pump in the event of a crash</li><li>Dry braking</li><li>Dynamic brake control</li><li>Dynamic stability control + (DSC+)</li><li>Dynamic Traction Control - DTC</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Electromechanical parking brake with automatic drive away release and auto hold function</li><li>Front and rear brake discs with interior ventilation</li><li>Head airbags</li><li>M Sport brakes with blue calipers M designation in front</li><li>M sport seatbelt</li><li>Plastic fuel tank</li><li>Pyrotechnic seat belt tensioners</li><li>Roll over protection</li><li>Seat belt force limiter</li><li>Seat belt stopper</li><li>Seat occupancy protection</li><li>Side airbags for driver and passenger</li><li>Two tone horn</li><li>Tyre pressure monitoring with three level warning strategy</li><li>Warning triangle</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8"> Security </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Centre lock switch</li><li>Closing system with central locking</li><li>Electronic vehicle immobiliser</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Start/stop button with Comfort Go keyless engine start and auto Start/stop deactivation button</li><li>Thatcham cat 1 remote alarm</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-9"> Trim </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-9" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Aluminium tetragon interior trim</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Sensatec dashboard</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-10"> Wheels </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-10" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-10"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Reduced rolling resistance tyres</li><li>Tool kit</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Tyre repair kit</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Technical specification</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-2"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="f3c734cf-3076-45da-8e74-8dae8b6b2ef6" data-template-vis-scroll-to-parent="sm" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1"> Emissions - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>CO</strong> 0.0868</li><li><strong>HC+NOx</strong> Not Available</li><li><strong>Noise Level dB(A)</strong> 69</li><li><strong>NOx</strong> 0.0062</li><li><strong>Particles</strong> 0.0002</li><li><strong>Standard Euro Emissions</strong> EURO 6</li><li><strong>WLTP - CO2 (g/km) - Comb</strong> 180</li><li><strong>WLTP - CO2 (g/km) - Comb - TEH</strong> 180</li><li><strong>WLTP - CO2 (g/km) - Comb - TEL</strong> 180</li><li><strong>WLTP - CO2 (g/km) - Extra High</strong> 170</li><li><strong>WLTP - CO2 (g/km) - Extra High - TEH</strong> 175</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - CO2 (g/km) - Extra High - TEL</strong> 170</li><li><strong>WLTP - CO2 (g/km) - High</strong> 157</li><li><strong>WLTP - CO2 (g/km) - High - TEH</strong> 159</li><li><strong>WLTP - CO2 (g/km) - High - TEL</strong> 157</li><li><strong>WLTP - CO2 (g/km) - Low</strong> 268</li><li><strong>WLTP - CO2 (g/km) - Low - TEH</strong> 275</li><li><strong>WLTP - CO2 (g/km) - Low - TEL</strong> 259</li><li><strong>WLTP - CO2 (g/km) - Medium</strong> 177</li><li><strong>WLTP - CO2 (g/km) - Medium - TEH</strong> 183</li><li><strong>WLTP - CO2 (g/km) - Medium - TEL</strong> 177</li></ul></div></div></div></div><div class="row"><div class="col col--first align align--left"><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><br/><p class="small"><strong>Please note:</strong> Please note all data is supplied by the manufacturer based on Government approved testing. During "real world" usage these figures may vary based on your own specific driving style, road and weather conditions. To understand these more fully please refer to the manufacturer and/or a franchised supplier.</p></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2"> Engine and Drive Train </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Camshaft</strong> DOHC</li><li><strong>Catalytic Convertor</strong> Yes</li><li><strong>CC</strong> 2998</li><li><strong>Compression Ratio</strong> 11.0:1</li><li><strong>Cylinder Layout</strong> IN-LINE</li><li><strong>Cylinders</strong> 6</li><li><strong>Cylinders - Bore (mm)</strong> 82</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Cylinders - Stroke (mm)</strong> 94.6</li><li><strong>Engine Code</strong> B58B30M1</li><li><strong>Engine Layout</strong> NORTH SOUTH</li><li><strong>Fuel Delivery</strong> TWIN TURBO</li><li><strong>Gears</strong> 8 SPEED</li><li><strong>Number of Valves</strong> 24</li><li><strong>Transmission</strong> SEMI-AUTO</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3"> Fuel Consumption - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>EC Combined (mpg)</strong> 38.7</li><li><strong>EC Directive 1999/100/EC Applies</strong> No</li><li><strong>EC Extra Urban (mpg)</strong> 46.3</li><li><strong>EC Urban (mpg)</strong> 30.7</li><li><strong>WLTP - FC (l/100km) - Comb</strong> 8</li><li><strong>WLTP - FC (l/100km) - Comb - TEH</strong> 8</li><li><strong>WLTP - FC (l/100km) - Comb - TEL</strong> 8</li><li><strong>WLTP - FC (l/100km) - Extra High</strong> 7.5</li><li><strong>WLTP - FC (l/100km) - Extra High - TEH</strong> 7.7</li><li><strong>WLTP - FC (l/100km) - Extra High - TEL</strong> 7.5</li><li><strong>WLTP - FC (l/100km) - High</strong> 7</li><li><strong>WLTP - FC (l/100km) - High - TEH</strong> 7</li><li><strong>WLTP - FC (l/100km) - High - TEL</strong> 6.9</li><li><strong>WLTP - FC (l/100km) - Low</strong> 11.9</li><li><strong>WLTP - FC (l/100km) - Low - TEH</strong> 12.2</li><li><strong>WLTP - FC (l/100km) - Low - TEL</strong> 11.4</li><li><strong>WLTP - FC (l/100km) - Medium</strong> 7.9</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - FC (l/100km) - Medium - TEH</strong> 8.1</li><li><strong>WLTP - FC (l/100km) - Medium - TEL</strong> 7.8</li><li><strong>WLTP - MPG - Comb</strong> 35.3</li><li><strong>WLTP - MPG - Comb - TEH</strong> 35.3</li><li><strong>WLTP - MPG - Comb - TEL</strong> 35.3</li><li><strong>WLTP - MPG - Extra High</strong> 37.7</li><li><strong>WLTP - MPG - Extra High - TEH</strong> 36.7</li><li><strong>WLTP - MPG - Extra High - TEL</strong> 37.7</li><li><strong>WLTP - MPG - High</strong> 40.4</li><li><strong>WLTP - MPG - High - TEH</strong> 40.4</li><li><strong>WLTP - MPG - High - TEL</strong> 40.9</li><li><strong>WLTP - MPG - Low</strong> 23.7</li><li><strong>WLTP - MPG - Low - TEH</strong> 23.2</li><li><strong>WLTP - MPG - Low - TEL</strong> 24.8</li><li><strong>WLTP - MPG - Medium</strong> 35.8</li><li><strong>WLTP - MPG - Medium - TEH</strong> 34.9</li><li><strong>WLTP - MPG - Medium - TEL</strong> 36.2</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4"> General </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>AdBlue</strong> No</li><li><strong>Alternative Fuel Qualifying</strong> No</li><li><strong>Badge Engine CC</strong> 3.0</li><li><strong>Badge Power</strong> 340</li><li><strong>Based On ID</strong> Not Available</li><li><strong>Coin Description</strong> i sDrive</li><li><strong>Coin Series</strong> M40[Shadowline Plus]</li><li><strong>Did at least one aspect of this vehicle's safety give cause for concern?</strong> No</li><li><strong>Generation Mark</strong> 3</li><li><strong>Insurance Group 1 - 50 Effective January 07</strong> 38E</li><li><strong>NCAP Adult Occupant Protection %</strong> 97</li><li><strong>NCAP Child Occupant Protection %</strong> 87</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>NCAP Overall Rating - Effective February 09</strong> 5</li><li><strong>NCAP Pedestrian Protection %</strong> 91</li><li><strong>NCAP Safety Assist %</strong> 76</li><li><strong>Service Interval Frequency - Months</strong> 24</li><li><strong>Service Interval Mileage</strong> 18000</li><li><strong>Special Edition</strong> No</li><li><strong>Special Order</strong> No</li><li><strong>Standard manufacturers warranty - Mileage</strong> Unlimited</li><li><strong>Standard manufacturers warranty - Years</strong> 3</li><li><strong>Timing Belt Interval Frequency - Months</strong> Not Available</li><li><strong>Timing Belt Interval Mileage</strong> Not Available</li><li><strong>Vehicle Homologation Class</strong> M1</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5"> Performance </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>0 to 62 mph (secs)</strong> 4.5</li><li><strong>Engine Power - BHP</strong> 340</li><li><strong>Engine Power - KW</strong> 250</li><li><strong>Engine Power - RPM</strong> 5000</li><li><strong>Engine Torque - LBS.FT</strong> 369</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Engine Torque - MKG</strong> 51</li><li><strong>Engine Torque - NM</strong> 500</li><li><strong>Engine Torque - RPM</strong> 1600</li><li><strong>Top Speed</strong> 155</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6"> Test Cycles </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Emissions Test Cycle</strong> WLTP</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>RDE Certification Level</strong> RDE 2</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7"> Tyres </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Alloys?</strong> Yes</li><li><strong>Space Saver?</strong> No</li><li><strong>Tyre Size Front</strong> 255/35 R19</li><li><strong>Tyre Size Rear</strong> 275/35 R19</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Tyre Size Spare</strong> TYRE REPAIR KIT</li><li><strong>Wheel Style</strong> V SPOKE STYLE 772M</li><li><strong>Wheel Type</strong> 19" ALLOY</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8"> Vehicle Dimensions </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Height</strong> 1303</li><li><strong>Height (including roof rails)</strong> Not Available</li><li><strong>Length</strong> 4324</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Wheelbase</strong> 2470</li><li><strong>Width</strong> 1864</li><li><strong>Width (including mirrors)</strong> 2024</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9"> Weight and Capacities </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Fuel Tank Capacity (Litres)</strong> 52</li><li><strong>Gross Vehicle Weight</strong> 1860</li><li><strong>Luggage Capacity (Seats Down)</strong> Not Available</li><li><strong>Luggage Capacity (Seats Up)</strong> 281</li><li><strong>Max. Loading Weight</strong> 295</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Max. Roof Load</strong> Not Available</li><li><strong>Minimum Kerbweight</strong> 1565</li><li><strong>No. of Seats</strong> 2</li><li><strong>Turning Circle - Kerb to Kerb</strong> 11</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Carousel functionality
+      const slides = document.querySelector('.carousel-slides');
+      const totalSlides = slides.children.length;
+      let currentIndex = 0;
+      document.querySelector('.carousel-button.prev').addEventListener('click', function() {
+        currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+        updateCarousel();
+      });
+      document.querySelector('.carousel-button.next').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      });
+      function updateCarousel() {
+        const width = slides.clientWidth;
+        slides.style.transform = 'translateX(' + (-width * currentIndex) + 'px)';
+      }
+      window.addEventListener("resize", updateCarousel);
+      
+      // Setup single-select groups (paint colour and interior trim)
+      function setupSingleSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      // Setup multi-select group (optional extras)
+      function setupMultiSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      
+      setupSingleSelect("Choose paint colour");
+      setupSingleSelect("Choose interior trim");
+      setupMultiSelect("Choose optional extras");
+      
+      // Recalculate vehicle options total
+      function recalcOptionsTotal() {
+        let total = 0.0;
+        document.querySelectorAll('.option-entry.selected').forEach(function(opt) {
+          total += parseFloat(opt.getAttribute('data-price'));
+        });
+        document.getElementById("optionsTotal").textContent = "£" + total.toFixed(2);
+      }
+    });
+    </script>
+</body>
+</html>

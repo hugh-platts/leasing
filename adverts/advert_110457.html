@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMW 2 Series Coupe - Advert</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header-title {
+      color: #fff;
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    /* Top container: Carousel + Pricing */
+    .top-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .gallery-container {
+      flex: 2;
+      min-width: 300px;
+      position: relative;
+    }
+    .pricing-container {
+      flex: 1;
+      min-width: 250px;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      border-radius: 4px;
+      height: fit-content;
+    }
+    /* Bootstrap-style Carousel for main images */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .carousel-item {
+      display: none;
+      position: relative;
+      transition: opacity 0.5s ease;
+    }
+    .carousel-item.active {
+      display: block;
+      opacity: 1;
+    }
+    .carousel-item img {
+      width: 100%;
+      object-fit: contain;
+    }
+    .carousel-indicators {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .carousel-indicators li {
+      background-color: #ccc;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      cursor: pointer;
+    }
+    .carousel-indicators .active {
+      background-color: #f70c0c;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      padding: 0 10px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .carousel-control-prev {
+      left: -40px;
+    }
+    .carousel-control-next {
+      right: -40px;
+    }
+    /* Thumbnail selector below carousel */
+    .thumb-container {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .thumb-container img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid #444;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .thumb-container img.selected {
+      border-color: #007BFF;
+    }
+    /* Order Summary Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #555;
+      text-align: left;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    /* Vehicle Options */
+    .options-group {
+      margin-bottom: 15px;
+    }
+    .option-entry {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      background: #444;
+      color: #ccc;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .option-entry.selected {
+      border-color: #007BFF;
+      background-color: #00539C;
+      color: #fff;
+    }
+    .mandatory-notice {
+      background: #CF241D;
+      border: 1px solid #b21e19;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    /* Collapsible details */
+    details {
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    details summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+    /* Hide tooltip buttons */
+    .tooltip__btn { display: none; }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">BMW 2 Series Coupe</h1>
+  </header>
+  <div class="subtitle">220i M Sport Step Auto (Tech Pack) Lease</div>
+  
+  <div class="top-container">
+    <div class="gallery-container">
+      <h2>Image Gallery</h2>
+      
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4" class=""></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5" class=""></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-angularfront.png?m=312w0pu05050505" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-angularrear.png?m=312w0pu05050505" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-dashboard.png?m=112w0pu" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-frontseat.png?m=112w0pu" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-sideview.png?m=312w0pu05050505" loading="lazy">
+    </div>
+    <div class="carousel-item ">
+      <img class="d-block w-100" src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-trunk.png?m=112w0pu" loading="lazy">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button">
+    <img src="https://www.leama.co.uk/dist/img/left.svg" style="width: 60px; height: 60px;">
+    <span class="sr-only"></span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button">
+    <img src="https://www.leama.co.uk/dist/img/right.svg" style="width: 60px; height: 60px;">
+    <span class="sr-only"></span>
+  </a>
+</div>
+
+      <div class="thumb-container">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-angularfront.png?m=312w0pu05050505" class="selected" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-angularrear.png?m=312w0pu05050505" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-dashboard.png?m=112w0pu" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-frontseat.png?m=112w0pu" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-sideview.png?m=312w0pu05050505" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/bmw-22240imxdrivecp2b-trunk.png?m=112w0pu" class="" loading="eager" style="width:80px; height:60px; object-fit:cover;">
+</div>
+
+    </div>
+    <div class="pricing-container">
+      <h2>Pricing Details</h2>
+      <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Monthly Price</td><td>£514.62</td></tr>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£6,175.44 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+    </div>
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Options</h2>
+    <div class="mandatory-notice">
+      Please select at least one option from each group: <strong>Choose paint colour</strong>, 
+      <strong>Choose interior trim</strong> and <strong>Choose optional extras</strong>.
+    </div>
+    <div class="options-group"><h3>Choose paint colour</h3>
+<div class="option-entry" data-group="Choose paint colour" data-price="2495.0">Individual paint - Frozen Portimao blue (£2495.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="2495.0">Individual paint - Frozen pure grey (£2495.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Black sapphire (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Brooklyn grey (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Fire red (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Mineral white (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Portimao blue (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Skyscraper grey (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="595.0">Metallic - Thundernight (£595.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Alpine white (Free)</div>
+</div>
+<div class="options-group"><h3>Choose interior trim</h3>
+<div class="option-entry" data-group="Choose interior trim" data-price="165.0">Aluminium rhombicle anthracite M interior trim (£165.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="165.0">Ash grey blue fine wood open pored interior trim (£165.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="165.0">Fineline light open pored fine wood trim (£165.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">M PerformTex cloth - Black with M piping (Free)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="515.0">M interior trim finishers in carbon fibre (£515.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="275.0">Sensatec perforated - Black (£275.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="275.0">Sensatec perforated - Cognac (£275.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="275.0">Sensatec perforated - Tacora red (£275.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="1150.0">Vernasca leather - Black with blue stitching (£1150.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="1150.0">Vernasca leather - Black with grey contrast stitching (£1150.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="1150.0">Vernasca leather - Black with red highlight (£1150.00)</div>
+<div class="option-entry" data-group="Choose interior trim" data-price="1150.0">Vernasca leather - Oyster with grey contrast stitching (£1150.00)</div>
+</div>
+<div class="options-group"><h3>Choose optional extras</h3>
+<div class="option-entry" data-group="Choose optional extras" data-price="1000.0">19" M Light Double Spoke Jet Black Alloy Wheels With Mixed Tyres - Style 995 M (£1000.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="700.0">19" Y-spoke BMW Individual Light Bicolour Alloy Wheels With Mixed Tyres - Style 1038 I (£700.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="700.0">19'' M Light Double Spoke Bicolour Alloy Wheels With Mixed Tyres - Style 995 M (£700.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="545.0">Active Cruise Control (£545.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="410.0">Crafted Clarity (£410.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="860.0">Electric Front Seat Adjustment With Driver Memory (£860.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="880.0">Electric Glass Sunroof (£880.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="825.0">Harman/Kardon Surround Sound System (£825.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="185.0">Heated Steering Wheel (£185.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="315.0">HiFi Loudspeaker Audio System (£315.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="180.0">Illuminated M Highlighters (£180.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="300.0">Interior And Exterior Mirror Pack - 2 Series Coupe (£300.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="225.0">Lumbar Support (£225.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="590.0">M Sport Brakes With Dark Blue Metallic Calipers (£590.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="890.0">M Sport Seats (£890.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="0.0">Model Designation Deletion (Free)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="275.0">Sensatec Perforated Upholstery (£275.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="350.0">Sun Protection Glass (£350.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="770.0">Trailer Tow Hitch With Removable Ball Head (£770.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="1150.0">Vernasca Leather Upholstery (£1150.00)</div>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Order Summary</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Monthly Price</td><td>£514.62</td></tr>
+<tr><td>Processing Fee</td><td>£300.00 Incl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£6,175.44 Incl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Details</h2>
+    
+<details>
+  <summary>Vehicle Details</summary>
+  <div><p>Vehicle details not found.</p></div>
+</details>
+            
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Main Carousel functionality (Bootstrap-style)
+      let currentIndex = 0;
+      const items = document.querySelectorAll('.carousel-item');
+      const indicators = document.querySelectorAll('.carousel-indicators li');
+      
+      function showSlide(index) {
+        items.forEach((item, i) => {
+          item.classList.toggle('active', i === index);
+          if (indicators[i]) {
+            indicators[i].classList.toggle('active', i === index);
+          }
+        });
+        // Update thumbnail selector.
+        const thumbs = document.querySelectorAll('.thumb-container img');
+        thumbs.forEach((thumb, i) => {
+          thumb.classList.toggle('selected', i === index);
+        });
+      }
+      
+      // Set click events on indicators.
+      indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => {
+          currentIndex = i;
+          showSlide(currentIndex);
+        });
+      });
+      
+      // Set click events on carousel controls.
+      document.querySelector('.carousel-control-prev').addEventListener('click', function(e) {
+        e.preventDefault();
+        currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
+        showSlide(currentIndex);
+      });
+      
+      document.querySelector('.carousel-control-next').addEventListener('click', function(e) {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+      });
+      
+      // Auto-cycle every 10 seconds.
+      setInterval(function() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showSlide(currentIndex);
+      }, 10000);
+      
+      // Thumbnail selector: update main carousel when a thumbnail is clicked.
+      const thumbImages = document.querySelectorAll('.thumb-container img');
+      thumbImages.forEach((img, i) => {
+        img.addEventListener('click', () => {
+          currentIndex = i;
+          showSlide(currentIndex);
+        });
+      });
+      
+      // Vehicle Options: setup single-select and multi-select.
+      function setupSingleSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      function setupMultiSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      
+      setupSingleSelect("Choose paint colour");
+      setupSingleSelect("Choose interior trim");
+      setupMultiSelect("Choose optional extras");
+      
+      function recalcOptionsTotal() {
+        let total = 0.0;
+        document.querySelectorAll('.option-entry.selected').forEach(function(opt) {
+          total += parseFloat(opt.getAttribute('data-price'));
+        });
+        document.getElementById("optionsTotal").textContent = "£" + total.toFixed(2);
+      }
+    });
+    </script>
+</body>
+</html>

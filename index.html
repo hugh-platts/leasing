@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Deals</title>
+  <!-- Bootstrap CSS (v4.5) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e; /* dark overall background */
+      color: #ccc;
+      font-family: "Exo 2",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Header Styles */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .header img {
+      width: 220px;
+      height: 60px;
+      object-fit: contain;
+      margin-right: 15px;
+    }
+    .header-title {
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+      color: #fff;
+      margin: 0 0 25px;
+      font-weight: bold;
+      font-family: "Cinzel",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+    /* Filter Box Styles */
+    .filter-box {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    .filter-box label {
+      color: #ccc;
+    }
+    .filter-box select,
+    .filter-box input[type="checkbox"] {
+      background: #444;
+      color: #ccc;
+      border: 1px solid #555;
+    }
+    /* Result Count */
+    #resultCount {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #ccc;
+    }
+    /* Advert Card Styles */
+    .card {
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+      border: none;
+      transition: transform 0.2s;
+      background: #333;
+      color: #fff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-img-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 66.5%; /* Based on natural dimensions: 378x251 */
+      overflow: hidden;
+      background: #222;
+    }
+    .card-img-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .card-body {
+      padding: 15px;
+      background: #3a3a3a;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    /* Advert text styles (Exo 2) */
+    .advert-text {
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-font-smoothing: antialiased;
+      font-family: "Exo 2",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+      font-weight: 400;
+      color: #fff;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin: 0 0 10px;
+      line-height: 2em;
+      white-space: pre-wrap;
+    }
+    /* Variant container (bordered) */
+    .variant-container {
+      border: 1px solid #353434;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      background: #fff;
+      color: #333;
+    }
+    /* Status container */
+    .status-container {
+      border: 1px solid #363636;
+      padding: 6px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      background: #fff;
+      color: #333;
+      font-size: 0.9rem;
+    }
+    /* Load More button */
+    #loadMoreBtn {
+      margin: 20px auto;
+      display: block;
+      background: #CF241D;
+      border-color: #CF241D;
+    }
+    #loadMoreBtn:hover {
+      background: #b21e19;
+      border-color: #b21e19;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <img src="https://www.leama.co.uk/dist/img/logo.png" alt="Logo">
+    <div class="header-title"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container my-4">
+    <!-- Filter Box -->
+    <div class="filter-box">
+      <div class="row">
+        <div class="col-md-2 mb-2">
+          <label for="selectBrand">Brand</label>
+          <select id="selectBrand" class="form-control">
+            <option value="">All Brands</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="selectVariant">Variant</label>
+          <select id="selectVariant" class="form-control">
+            <option value="">All Variants</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="priceSelect">Price (£)</label>
+          <select id="priceSelect" class="form-control">
+            <option value="10000">All</option>
+            <option value="200">Under £200</option>
+            <option value="400">Under £400</option>
+            <option value="600">Under £600</option>
+            <option value="800">Under £800</option>
+            <option value="1000">Under £1000</option>
+            <option value="1000+">Over £1000</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="sortSelect">Sort By</label>
+          <select id="sortSelect" class="form-control">
+            <option value="asc" selected>Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+          </select>
+        </div>
+        <div class="col-md-2 mb-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="hideComingSoon">
+            <label class="form-check-label" for="hideComingSoon" style="color:#ccc;">Hide Coming Soon</label>
+          </div>
+        </div>
+        <div class="col-md-2 mb-2 d-flex align-items-end">
+          <button id="searchBtn" class="btn btn-primary btn-block" style="background: #CF241D; border-color: #CF241D;">Search</button>
+        </div>
+      </div>
+      <!-- Display counts for selected brand and variant -->
+      <div id="filterCounts" style="color:#ccc; margin-top:10px;"></div>
+    </div>
+
+    <!-- Result Count -->
+    <div id="resultCount"></div>
+
+    <!-- Adverts Grid -->
+    <div class="row" id="advertsGrid">
+      <!-- Cards will be injected here -->
+    </div>
+    <button id="loadMoreBtn" class="btn btn-primary">Load More</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let vehicles = [];          // All vehicles from JSON
+    let filteredVehicles = [];  // Vehicles after filtering
+    let displayIndex = 0;       // Current index in filteredVehicles
+    const pageSize = 30;        // Number of adverts per batch
+
+    // Convert price string (e.g. "\u00a3377.21") to number
+    function parsePrice(priceStr) {
+      if (!priceStr) return 0;
+      const num = parseFloat(priceStr.replace(/[£,]/g, ''));
+      return isNaN(num) ? 0 : num;
+    }
+
+    // Populate brand dropdown from vehicles array with counts
+    function populateBrandDropdown() {
+      const selectBrand = document.getElementById('selectBrand');
+      selectBrand.innerHTML = '<option value="">All Brands</option>';
+      const brands = [...new Set(vehicles.map(v => v.brand).filter(Boolean))].sort();
+      brands.forEach(brand => {
+        const count = vehicles.filter(v => v.brand === brand).length;
+        const option = document.createElement('option');
+        option.value = brand;
+        option.innerText = `${brand} (${count})`;
+        selectBrand.appendChild(option);
+      });
+    }
+
+    // Update variant dropdown based on selected brand with counts
+    function updateVariantDropdown() {
+      const selectVariant = document.getElementById('selectVariant');
+      selectVariant.innerHTML = '<option value="">All Variants</option>';
+      const selectedBrand = document.getElementById('selectBrand').value;
+      let variants = vehicles;
+      if (selectedBrand) {
+        variants = vehicles.filter(v => v.brand === selectedBrand);
+      }
+      const uniqueVariants = [...new Set(variants.map(v => v.variant).filter(Boolean))].sort();
+      uniqueVariants.forEach(variant => {
+        const count = variants.filter(v => v.variant === variant).length;
+        const option = document.createElement('option');
+        option.value = variant;
+        option.innerText = `${variant} (${count})`;
+        selectVariant.appendChild(option);
+      });
+    }
+
+    // Update result count display
+    function updateResultCount() {
+      const resultCountDiv = document.getElementById('resultCount');
+      resultCountDiv.innerText = `Showing ${filteredVehicles.length} adverts.`;
+    }
+
+    // Render a batch of vehicles from filteredVehicles
+    function renderVehicles() {
+      const grid = document.getElementById('advertsGrid');
+      const endIndex = Math.min(displayIndex + pageSize, filteredVehicles.length);
+      for (let i = displayIndex; i < endIndex; i++) {
+        const advert = filteredVehicles[i];
+        const col = document.createElement('div');
+        col.className = 'col-12 col-sm-6 col-lg-4';
+        
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        // Image container with lazy loading
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'card-img-container';
+        if (advert.image_src) {
+          const img = document.createElement('img');
+          img.src = advert.image_src;
+          img.alt = advert.title || advert.name || "Car Image";
+          img.setAttribute("width", "378");
+          img.setAttribute("height", "251");
+          img.loading = "lazy";
+          imgContainer.appendChild(img);
+        }
+        card.appendChild(imgContainer);
+
+        // Card body
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+
+        // Title (advert text style)
+        const title = document.createElement('h5');
+        title.className = 'card-title advert-text';
+        title.innerText = advert.title || advert.name || "No Title";
+        cardBody.appendChild(title);
+
+        // Price per month (if £0 then "Coming Soon")
+        const price = document.createElement('p');
+        price.className = 'advert-text';
+        const rawPrice = advert.price_per_month || advert.price || 'N/A';
+        const priceVal = parsePrice(rawPrice);
+        const displayPrice = (rawPrice === '\u00a30.00' || rawPrice === '£0' || priceVal === 0)
+          ? 'Coming Soon'
+          : rawPrice;
+        price.innerHTML = `<strong>Price:</strong> ${displayPrice}`;
+        cardBody.appendChild(price);
+
+        // Variant container (bordered) for brand, variant, and subtitle
+        const variantContainer = document.createElement('div');
+        variantContainer.className = 'variant-container';
+        variantContainer.innerHTML = `
+          <p class="mb-1"><strong>Brand:</strong> ${advert.brand || 'N/A'}</p>
+          <p class="mb-1"><strong>Variant:</strong> ${advert.variant || 'N/A'}</p>
+          ${ advert.subtitle ? `<p class="mb-0"><strong></strong> ${advert.subtitle}</p>` : '' }
+        `;
+        cardBody.appendChild(variantContainer);
+
+        // Status and Lease Type container
+        if (advert.status || advert.lease_type) {
+          const statusContainer = document.createElement('div');
+          statusContainer.className = 'status-container';
+          statusContainer.innerHTML = `
+            ${advert.status ? `<p class="mb-1"><strong>Status:</strong> ${advert.status}</p>` : ''}
+            ${advert.lease_type ? `<p class="mb-0"><strong>Lease Type:</strong> ${advert.lease_type}</p>` : ''}
+          `;
+          cardBody.appendChild(statusContainer);
+        }
+
+        // Highlighted text and warranty if available
+        if (advert.highlighted_text) {
+          const highlighted = document.createElement('p');
+          highlighted.className = 'advert-text';
+          highlighted.innerHTML = `<strong><li></strong> ${advert.highlighted_text}`;
+          cardBody.appendChild(highlighted);
+        }
+        if (advert.warranty) {
+          const warranty = document.createElement('p');
+          warranty.className = 'advert-text';
+          warranty.innerHTML = `<strong><li></strong> ${advert.warranty}`;
+          cardBody.appendChild(warranty);
+        }
+
+        // Collapsible extra details (features and others)
+        const collapseId = `collapseDetails${i}`;
+        const collapseDiv = document.createElement('div');
+        collapseDiv.className = 'collapse';
+        collapseDiv.id = collapseId;
+        const extraDetails = document.createElement('div');
+        extraDetails.className = 'advert-text';
+        extraDetails.innerHTML = `
+          ${advert.category ? `<p><strong><li></strong> ${advert.category}</p>` : ''}
+          ${advert.initial_rental ? `<p><strong><li></strong> ${advert.initial_rental}</p>` : ''}
+          ${advert.processing_fee ? `<p><strong><li></strong> ${advert.processing_fee}</p>` : ''}
+          ${advert.conditions ? `<p><strong><li></strong> ${advert.conditions}</p>` : ''}
+          ${(advert.features && advert.features.length > 0) ? `<p><strong>Features:</strong> ${advert.features.join(', ')}</p>` : ''}
+          ${advert.link ? `<p><a href="${advert.link}" target="_blank">View Details</a></p>` : ''}
+        `;
+        collapseDiv.appendChild(extraDetails);
+        cardBody.appendChild(collapseDiv);
+
+        // Toggle button for extra details
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'btn btn-sm btn-outline-primary btn-details';
+        toggleBtn.setAttribute('data-toggle', 'collapse');
+        toggleBtn.setAttribute('data-target', `#${collapseId}`);
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-controls', collapseId);
+        toggleBtn.innerText = 'Show More';
+        toggleBtn.addEventListener('click', function () {
+          setTimeout(() => {
+            if (document.getElementById(collapseId).classList.contains('show')) {
+              toggleBtn.innerText = 'Show Less';
+            } else {
+              toggleBtn.innerText = 'Show More';
+            }
+          }, 350);
+        });
+        cardBody.appendChild(toggleBtn);
+
+        card.appendChild(cardBody);
+        col.appendChild(card);
+        grid.appendChild(col);
+      }
+      displayIndex = endIndex;
+      document.getElementById('loadMoreBtn').style.display = (displayIndex >= filteredVehicles.length) ? 'none' : 'block';
+      updateResultCount();
+    }
+
+    // Function to update the result count display
+    function updateResultCount() {
+      const resultCountDiv = document.getElementById('resultCount');
+      resultCountDiv.innerText = `Showing ${filteredVehicles.length} adverts.`;
+    }
+
+    // Function to filter and sort vehicles based on selected filters and sort order
+    function filterVehicles() {
+      const brandQuery = document.getElementById('selectBrand').value;
+      const variantQuery = document.getElementById('selectVariant').value;
+      const priceSelectVal = document.getElementById('priceSelect').value;
+      let maxPrice = parseFloat(priceSelectVal);
+      // If the option is "Over £1000", we treat it as no max filter (or a very high value)
+      if (priceSelectVal === "1000+") {
+        maxPrice = 100000;
+      }
+      const sortOrder = document.getElementById('sortSelect').value;
+      const hideComingSoon = document.getElementById('hideComingSoon').checked;
+      
+      filteredVehicles = vehicles.filter(advert => {
+        const brandMatch = !brandQuery || (advert.brand === brandQuery);
+        const variantMatch = !variantQuery || (advert.variant === variantQuery);
+        const priceVal = parsePrice(advert.price_per_month || advert.price);
+        const priceMatch = priceVal <= maxPrice;
+        const comingSoon = priceVal === 0;
+        return brandMatch && variantMatch && priceMatch && (!hideComingSoon || !comingSoon);
+      });
+
+      // Sort vehicles so that coming soon (price 0) always appear at the bottom
+      filteredVehicles.sort((a, b) => {
+        const priceA = parsePrice(a.price_per_month || a.price);
+        const priceB = parsePrice(b.price_per_month || b.price);
+        // Adjust sort value: if price is 0, treat as Infinity for asc and -Infinity for desc
+        const adjustedA = priceA === 0 ? Infinity : priceA;
+        const adjustedB = priceB === 0 ? Infinity : priceB;
+        if (sortOrder === "asc") {
+          return adjustedA - adjustedB;
+        } else {
+          // For descending, if price is 0, still want them at bottom
+          const adjustedA_desc = priceA === 0 ? -Infinity : priceA;
+          const adjustedB_desc = priceB === 0 ? -Infinity : priceB;
+          return adjustedB_desc - adjustedA_desc;
+        }
+      });
+
+      displayIndex = 0;
+      document.getElementById('advertsGrid').innerHTML = '';
+      renderVehicles();
+    }
+
+    // Fetch test_vehicles.json
+    fetch('test_vehicles.json')
+      .then(response => response.json())
+      .then(data => {
+        vehicles = data;
+        filteredVehicles = vehicles;
+        populateBrandDropdown();
+        updateVariantDropdown();
+        // Auto sort by ascending by default, with coming soon at bottom
+        filteredVehicles.sort((a, b) => {
+          const priceA = parsePrice(a.price_per_month || a.price);
+          const priceB = parsePrice(b.price_per_month || b.price);
+          return priceA === 0 ? Infinity : priceA - (priceB === 0 ? Infinity : priceB);
+        });
+        renderVehicles();
+      })
+      .catch(err => console.error("Error loading JSON:", err));
+
+    document.getElementById('selectBrand').addEventListener('change', updateVariantDropdown);
+    document.getElementById('searchBtn').addEventListener('click', filterVehicles);
+    document.getElementById('loadMoreBtn').addEventListener('click', renderVehicles);
+  </script>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

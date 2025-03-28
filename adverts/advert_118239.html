@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ford Ranger - Advert</title>
+  <style>
+    /* Global Styles */
+    body {
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Header Styles */
+    .header {
+      background: #111;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .header-title {
+      color: #fff;
+      font-size: 2.5em;
+      font-family: "Cinzel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    /* Section container */
+    .section {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    /* Carousel styles */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slides img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .carousel-button.prev {
+      left: 10px;
+    }
+    .carousel-button.next {
+      right: 10px;
+    }
+    /* Order Summary table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    /* Vehicle options styling */
+    .options-group {
+      margin-bottom: 15px;
+    }
+    .option-entry {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      border: 2px solid #555;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: #444;
+      color: #ccc;
+    }
+    .option-entry.selected {
+      border-color: #007BFF;
+      background-color: #00539C;
+      color: #fff;
+    }
+    .mandatory-notice {
+      background: #CF241D;
+      border: 1px solid #b21e19;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      color: #fff;
+    }
+    /* Collapsible details */
+    details {
+      background: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    details summary {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+    /* Hide tooltip buttons */
+    .tooltip__btn { display: none; }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">Ford Ranger</h1>
+  </header>
+  <div class="subtitle">Double Cab Raptor 2.0 EcoBlue 210 Auto Van Leasing and Contract Hire</div>
+  
+  <div class="section">
+    <h2>Image Gallery</h2>
+    <div class="carousel-container"><div class="carousel-slides">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-angularfront.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-angularrear.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-dashboard.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-frontseat.png?m=112w0pu" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-sideview.png?m=312w0pu05050505" alt="Car Image" loading="lazy">
+  <img src="https://www.nationwidevehiclecontracts.co.uk/m/0/ford-24rangerdcltd4wdtc4bfr-trunk.png?m=112w0pu" alt="Car Image" loading="lazy">
+</div>
+<button class="carousel-button prev" aria-label="Previous">&#10094;</button>
+<button class="carousel-button next" aria-label="Next">&#10095;</button>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Pricing Details</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£250.00 Excl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£5,471.40 Excl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Options</h2>
+    <div class="mandatory-notice">
+      Please select at least one option from each group: <strong>Choose paint colour</strong>, 
+      <strong>Choose interior trim</strong> and <strong>Choose optional extras</strong>.
+      Any extra cost will be added as a one‑time payment.
+    </div>
+    <div class="options-group"><h3>Choose paint colour</h3>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Blue Lightning (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Command grey (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Meteor grey (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Metallic - Shadow black (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="720.0">Premium - Code orange (£720.00)</div>
+<div class="option-entry" data-group="Choose paint colour" data-price="0.0">Solid - Arctic white (Free)</div>
+</div>
+<div class="options-group"><h3>Choose interior trim</h3>
+<div class="option-entry" data-group="Choose interior trim" data-price="0.0">Super matte leather - Ebony (Free)</div>
+</div>
+<div class="options-group"><h3>Choose optional extras</h3>
+<div class="option-entry" data-group="Choose optional extras" data-price="510.0">13 Pin Towbar (£510.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="450.0">7 Pin Towbar (£450.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2100.0">Tonneau Cover - Retractable Roller Hardtype (£2100.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="2160.0">Exterior Dress Up Pack 3 - Ranger (£2160.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="720.0">Metallic Paint (£720.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="720.0">Premium Paint (£720.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="600.0">Raptor Splash Decal Pack - Ranger (£600.00)</div>
+<div class="option-entry" data-group="Choose optional extras" data-price="600.0">Technology Package 93 With Pro Trailer Backup Assist - Ranger Raptor (£600.00)</div>
+</div>
+
+  </div>
+  
+  <div class="section">
+    <h2>Order Summary</h2>
+    <table><thead><tr><th>Item</th><th>Price/Info</th></tr></thead><tbody>
+<tr><td>Processing Fee</td><td>£250.00 Excl VAT</td></tr>
+<tr><td>Initial Rental</td><td>£5,471.40 Excl VAT</td></tr>
+<tr>
+      <td>Vehicle Options Total (one‑time)</td>
+      <td id="optionsTotal">£0.00</td>
+    </tr>
+    </tbody></table>
+    
+  </div>
+  
+  <div class="section">
+    <h2>Vehicle Details</h2>
+    
+<details>
+  <summary>Summary vehicle data</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="true" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-0"><div class="container--content color color--default"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--fuel-cons"></span><div><strong>Fuel consumption</strong><div class="no-external-paragraph-margins content-links"><p>Unavailable</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--load-length"></span><div><strong>Load Length</strong><div class="no-external-paragraph-margins content-links"><p>Unavailable</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--payload"></span><div><strong>Payload</strong><div class="no-external-paragraph-margins content-links"><p>760</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--load-height"></span><div><strong>Load Height</strong><div class="no-external-paragraph-margins content-links"><p>Unavailable</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--fuel-cons"></span><div><strong>Fuel Type</strong><div class="no-external-paragraph-margins content-links"><p>Diesel</p></div></div></li><li class="col col-12 col--full-6"><span class="icon icon--transmission"></span><div><strong>Transmission</strong><div class="no-external-paragraph-margins content-links"><p>Automatic</p></div></div></li></ul></div></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="container--content color color--default breakpoint--md"><div class="key-points key-points--center color color--default highlight--default"><ul class="row"><li class="col col-12 col--full-6"><span class="icon icon--alloys"></span><div><div class="no-external-paragraph-margins content-links">Alloys 17"</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--air-con"></span><div><div class="no-external-paragraph-margins content-links">Air Con</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--heated-wheel"></span><div><div class="no-external-paragraph-margins content-links">Heated Wheel</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--wireless-phone-charging"></span><div><div class="no-external-paragraph-margins content-links">Wireless Charging</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--leather"></span><div><div class="no-external-paragraph-margins content-links">Leather</div></div></li><li class="col col-12 col--full-6"><span class="icon icon--privacy-glass"></span><div><div class="no-external-paragraph-margins content-links">Privacy Glass</div></div></li></ul></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Standard equipment</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-1"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="3eceb60a-b537-4a29-88e0-b8cde2ef3d78" data-template-vis-scroll-to-parent="sm" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1"> Driver Convenience </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-1" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>A-pillar assist handle</li><li>Electric power assisted steering</li><li>Electronic automatic gearshift</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Full TFT/LCD instrument cluster</li><li>Passenger side roof mounted grab handle</li><li>Wireless charging pad</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2"> Exterior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-2" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>360 lighting</li><li>Accent colour HD front bumper</li><li>Acoustic laminated windscreen</li><li>Assisted conventional tailgate</li><li>Automatic headlamp levelling</li><li>Automatic headlights</li><li>Black front fender grille</li><li>Black grille</li><li>Body colour exterior mirrors</li><li>Body coloured door handles</li><li>Cast alloy side step</li><li>Daytime running lights</li><li>Dual power heated fold back door mirror with pud lamps</li><li>E-marked glass</li><li>Electric rear window defroster</li><li>Electric windshield defroster</li><li>Electrochromic interior mirror</li><li>Extra large wheelarch flares</li><li>Fog lamp bezel</li><li>Front splash guard</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Front towing hooks</li><li>Fuel tank guard</li><li>High mounted stop lamp</li><li>LED Front fog lamp</li><li>Level 3 Taillamps</li><li>Manual liftgate</li><li>Metal underbody protection</li><li>Non locking capless fuel fill</li><li>Power front windows with one touch up/down</li><li>Power rear windows</li><li>Privacy glass</li><li>Rain sensitive windshield wipers</li><li>Rear bumper step accent color</li><li>Rear fog lamps</li><li>Rear splash guard</li><li>Rear towing hooks</li><li>Self coloured decklid handles</li><li>Solid paint</li><li>Tempered glass front window</li><li>Under hood engine cover</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3"> Interior Features </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-3" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>12v socket in bedliner</li><li>Cargo light</li><li>Console with double lid</li><li>Driver and passenger sunvisor with mirror</li><li>Electronic dual zone automatic air conditioning</li><li>Fresh air heater</li><li>Front premium floor mats</li><li>Heated steering wheel</li><li>High series air register</li><li>LED ambient interior lighting</li><li>Load box bedliner</li><li>Load box edge protectors</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Locking glove box lid</li><li>Non woven carpet</li><li>Overhead console with dome lamps</li><li>Pollen filter</li><li>Pull out cup holder</li><li>Radio noise supression</li><li>Rear floor ducts</li><li>Roof storage for driver sunglasses</li><li>Steering wheel with multimedia controls</li><li>Super matte leather upholstery</li><li>Tie down hooks</li><li>Washer tank level warn lamp</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4"> Packs </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-4" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Front seat pack 9 - Ranger</li><li>Functional upgrade pack 3 - Ranger</li><li>Heavy duty terrain pack - Ranger</li><li>ICE feature pack 106 - Ranger</li><li>Interior trim pack 15 - Ranger</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Lighting package level B - Ranger</li><li>Rear seat pack 15 - Ranger</li><li>Technology package 73 - Ranger Raptor</li><li>Trailer tow pack - Ranger</li><li>Wheel pack 19 - Ranger</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5"> Passive Safety </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-5" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Breakdown warning triangle</li><li>Child proof rear door locks</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Driver and passenger airbag</li><li>Dual note electric horn</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6"> Security </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-6" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>2 Remote control unit - key fob</li><li>Locking wheel lug nut</li><li>Non locking lug nuts</li><li>Passive keyless entry and start system</li><li>Power door dead locks</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Stolen vehicle recovery system</li><li>Tailgate lock</li><li>Thatcham alarm system</li><li>Thatcham security system</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7"> Technical </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-7" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>400W Power inverter</li><li>ABS/ESP brakes with electronic brake boost</li><li>Battery management system</li><li>Cabin socket and loadbox socket</li><li>Electric parking brake</li><li>Electrical outlet 3</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Engine start/stop system</li><li>Front and rear disc brakes</li><li>Locking front axle</li><li>Locking rear axle</li><li>Performance suspension</li><li>Rear power point plug</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8"> Wheels </button></h3><div aria-labelledby="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-t-8" class="accordion__body" data-visible="false" id="3eceb60a-b537-4a29-88e0-b8cde2ef3d78-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>17" alloy wheels painted in precision grey and all terrain tyres with Ford carbon black centre cap</li><li>17" Aluminium spare wheel</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li>Spare tire lock</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+<details>
+  <summary>Technical specification</summary>
+  <div><div class="tabbed-boxes__tab background background--white no-external-paragraph-margins" data-vis-group="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tabs" data-visible="false" id="cb-d25bfd30-0e40-4d97-9731-1b2b047ca460-tab-2"><div class="container--content color color--default"><div class="row"><div class="col col--first align align--left"><div class="container--content color color--default breakpoint--sm" data-defer-load=""><div class="accordion highlight--default" data-template-animation="expand" data-template-vis-group="f3c734cf-3076-45da-8e74-8dae8b6b2ef6" data-template-vis-scroll-to-parent="sm" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6"><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1"> Emissions - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-1" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-1"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>CO</strong> Not Available</li><li><strong>HC</strong> Not Available</li><li><strong>HC+NOx</strong> Not Available</li><li><strong>Noise Level dB(A)</strong> Not Available</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>NOx</strong> Not Available</li><li><strong>Particles</strong> Not Available</li><li><strong>Standard Euro Emissions</strong> EURO 6</li><li><strong>WLTP - CO2 (g/km) - Comb</strong> 278</li></ul></div></div></div></div><div class="row"><div class="col col--first align align--left"><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><br/><p class="small"><strong>Please note:</strong> Please note all data is supplied by the manufacturer based on Government approved testing. During "real world" usage these figures may vary based on your own specific driving style, road and weather conditions. To understand these more fully please refer to the manufacturer and/or a franchised supplier.</p></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2"> Engine and Drive Train </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-2" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-2"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Automatic Transmission</strong> Yes</li><li><strong>Catalytic Convertor</strong> Yes</li><li><strong>CC</strong> 1996</li><li><strong>Cooling System</strong> WATER</li><li><strong>Cylinder Layout</strong> IN-LINE</li><li><strong>Cylinders</strong> 4</li><li><strong>Engine Layout</strong> NORTH SOUTH</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Engine Make</strong> Not Available</li><li><strong>Fuel Delivery</strong> COMMON RAIL</li><li><strong>Fuel Type</strong> DIESEL</li><li><strong>Gears</strong> 10 SPEED</li><li><strong>Manual Transmission</strong> No</li><li><strong>Number of Valves</strong> 16</li><li><strong>Valve gear</strong> DOHC</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3"> Fuel Consumption - ICE </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-3" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-3"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>EC</strong> No</li><li><strong>WLTP - FC (l/100km) - Comb</strong> 10.6</li><li><strong>WLTP - FC (l/100km) - Comb - TEH</strong> 12.7</li><li><strong>WLTP - FC (l/100km) - Comb - TEL</strong> 9.2</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>WLTP - MPG - Comb</strong> 26.6</li><li><strong>WLTP - MPG - Comb - TEH</strong> 22.2</li><li><strong>WLTP - MPG - Comb - TEL</strong> 30.7</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4"> General </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-4" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-4"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Badge Engine CC</strong> 2.0</li><li><strong>Badge Power</strong> 210</li><li><strong>Based On ID</strong> Not Available</li><li><strong>Chassis Engine Number</strong> Not Available</li><li><strong>Clutch</strong> SINGLE DRY PLATE</li><li><strong>Coin Description</strong> Not Available</li><li><strong>Coin Gross Vehicle Weight Code</strong> Not Available</li><li><strong>Coin Power Output Code</strong> Not Available</li><li><strong>Coin Series</strong> Not Available</li><li><strong>Coin Wheelbase Description Code</strong> Not Available</li><li><strong>Coin Wheelbase Name Code</strong> Not Available</li><li><strong>Did at least one aspect of this vehicles safety give cause for concern?</strong> No</li><li><strong>Exhaust System</strong> CATALYTIC CONVERTER</li><li><strong>Front Brakes</strong> DISCS</li><li><strong>Front Suspension</strong> DOUBLE SUSPENSION</li><li><strong>Generation Mark</strong> 4</li><li><strong>Ghost model for valuation purposes</strong> No</li><li><strong>Hand Brake</strong> REAR WHEELS</li><li><strong>Insurance Group 1</strong> Not Available</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Insurance Group 2</strong> Not Available</li><li><strong>NCAP Adult Occupant Protection %</strong> 84</li><li><strong>NCAP Child Occupant Protection %</strong> 90</li><li><strong>NCAP Overall Rating - Effective February 09</strong> 5</li><li><strong>NCAP Overall Rating - LCV</strong> Not Available</li><li><strong>NCAP Pedestrian Protection %</strong> 74</li><li><strong>NCAP Safety Assist %</strong> 84</li><li><strong>Rear Brakes</strong> DISCS</li><li><strong>Rear Suspension</strong> LEAF SPRINGS</li><li><strong>Relative Height</strong> H1</li><li><strong>Relative Length</strong> L1</li><li><strong>Running Cost League Headings</strong> MEDIUM</li><li><strong>Special Edition</strong> No</li><li><strong>Special Order</strong> No</li><li><strong>Steering</strong> PAS</li><li><strong>VAT qualifying vehicle - Seek advice from HMRC</strong> Yes</li><li><strong>Vehicle Homologation Class</strong> N1</li><li><strong>Vin/Frame No.</strong> Not Available</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5"> Performance </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-5" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-5"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>BHP</strong> 210</li><li><strong>Engine Power KW</strong> 154</li><li><strong>Engine Torque LBS.FT</strong> 369</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Engine Torque MKG</strong> 51</li><li><strong>Engine Torque NM</strong> 500</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6"> Test Cycles </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-6" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-6"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Emissions Test Cycle</strong> WLTP</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>RDE Certification Level</strong> RDE 2</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7"> Tyres </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-7" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-7"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Alloys?</strong> Yes</li><li><strong>Automatic Clutch</strong> Yes</li><li><strong>Plated 3rd Axle</strong> Not Available</li><li><strong>Plated 4th Axle</strong> Not Available</li><li><strong>Space Saver?</strong> No</li><li><strong>Tyre Make</strong> Not Available</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Tyre Size Front</strong> 285/70 R17</li><li><strong>Tyre Size Rear</strong> 285/70 R17</li><li><strong>Tyre Size Spare</strong> FULL SIZE</li><li><strong>Wheel Style</strong> Not Available</li><li><strong>Wheel Type</strong> 17" ALLOY</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8"> Vehicle Dimensions </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-8" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-8"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Front Overhang</strong> 885</li><li><strong>Height</strong> 1884</li><li><strong>Height (including roof rails)</strong> Not Available</li><li><strong>Length</strong> 5370</li><li><strong>Lower Rear Door Width</strong> Not Available</li><li><strong>Rear Door Height</strong> Not Available</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Rear Overhang</strong> 1215</li><li><strong>Side Load Door Height</strong> Not Available</li><li><strong>Side Load Door Width</strong> Not Available</li><li><strong>Upper Rear Door Width</strong> Not Available</li><li><strong>Wheelbase</strong> 3270</li></ul></div></div></div></div></div></div></div><div class="accordion__item"><h3 class="accordion__heading"><button class="accordion__title" data-toggle="" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9"> Weight and Capacities </button></h3><div aria-labelledby="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-t-9" class="accordion__body" data-visible="false" id="f3c734cf-3076-45da-8e74-8dae8b6b2ef6-a-9"><div class="accordion__content"><div class="row row--no-wrap row--center"><div class="col col--alignable col--first col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Boot Capacity Saloons</strong> Not Available</li><li><strong>Gross Vehicle Weight</strong> 3280</li><li><strong>Load Space Volume</strong> Not Available</li><li><strong>Luggage Capacity (Seats Down)</strong> Not Available</li><li><strong>Luggage Capacity (Seats Up)</strong> Not Available</li><li><strong>Luggage Capacity - 2nd Row Seats Removed</strong> Not Available</li><li><strong>Luggage Capacity - 2nd Row Seats Up</strong> Not Available</li></ul></div></div></div><div class="col col--alignable col--full-6 align align--left"><div><div class="no-external-paragraph-margins img--content-parent content-links" data-defer-load=""><ul class="rte-bullet-invisible"><li><strong>Luggage Capacity - 3rd Row Seats Down</strong> Not Available</li><li><strong>Luggage Capacity - 3rd Row Seats Removed</strong> Not Available</li><li><strong>Luggage Capacity - 3rd Row Seats Up</strong> Not Available</li><li><strong>Max. Roof Load</strong> Not Available</li><li><strong>Minimum Kerbweight</strong> 2520</li><li><strong>No. of Seats</strong> 5</li><li><strong>Payload</strong> 760</li></ul></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</details>
+                
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Carousel functionality
+      const slides = document.querySelector('.carousel-slides');
+      const totalSlides = slides.children.length;
+      let currentIndex = 0;
+      document.querySelector('.carousel-button.prev').addEventListener('click', function() {
+        currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+        updateCarousel();
+      });
+      document.querySelector('.carousel-button.next').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      });
+      function updateCarousel() {
+        const width = slides.clientWidth;
+        slides.style.transform = 'translateX(' + (-width * currentIndex) + 'px)';
+      }
+      window.addEventListener("resize", updateCarousel);
+      
+      // Setup single-select groups (paint colour and interior trim)
+      function setupSingleSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            options.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      // Setup multi-select group (optional extras)
+      function setupMultiSelect(groupName) {
+        const options = document.querySelectorAll(`.option-entry[data-group='${groupName}']`);
+        options.forEach(opt => {
+          opt.addEventListener('click', function() {
+            this.classList.toggle('selected');
+            recalcOptionsTotal();
+          });
+        });
+      }
+      
+      setupSingleSelect("Choose paint colour");
+      setupSingleSelect("Choose interior trim");
+      setupMultiSelect("Choose optional extras");
+      
+      // Recalculate vehicle options total
+      function recalcOptionsTotal() {
+        let total = 0.0;
+        document.querySelectorAll('.option-entry.selected').forEach(function(opt) {
+          total += parseFloat(opt.getAttribute('data-price'));
+        });
+        document.getElementById("optionsTotal").textContent = "£" + total.toFixed(2);
+      }
+    });
+    </script>
+</body>
+</html>
